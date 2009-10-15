@@ -1,0 +1,14 @@
+Host git.rivco.net
+	HostName git.rivco.net
+	User git
+	Port 5483
+Host git.debian.org
+	HostName git.debian.org
+	User ghostbar
+Host svn.debian.org
+	HostName svn.debian.org
+	User ghostbar
+Host akkad
+	HostName rivco.net
+	User ghostbar
+	Port 5483

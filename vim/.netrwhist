@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/ghostbar/dev/debian/xscreensaver/xscreensaver/.git/branches'
+let g:netrw_dirhist_2='/home/ghostbar/dev/adobeair/twitter.client'
+let g:netrw_dirhist_3='/etc/apt/sources.list.d'
+let g:netrw_dirhist_4='/home/ghostbar/dev/debian/xscreensaver/xscreensaver/.pc/debian/patches/20_hack_flurry_man_name.patch'
+let g:netrw_dirhist_5='/home/ghostbar/dev/debian/perl/libhtml-wikiconverter-markdown-perl/svn/debian/patches'
+let g:netrw_dirhist_6='/home/ghostbar/dev/debian/perl/libnet-smpp-perl/svn/debian/patches'
+let g:netrw_dirhist_7='/etc/apt/apt.conf.d'
+let g:netrw_dirhist_8='/home/ghostbar/confs/chaos/userdotfiles/.vim/skeletons/bits'

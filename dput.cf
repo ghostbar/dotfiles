@@ -1,0 +1,15 @@
+[rivco]
+fqdn			= rivco.net
+login			= ghostbar
+incoming		= /home/ghostbar/incoming-unstable
+method			= scp
+ssh_config_options	= Port 5483
+run_dinstall		= 0
+
+[rivco-exp]
+fqdn			= rivco.net
+login			= ghostbar
+incoming		= /home/ghostbar/incoming-experimental
+method			= scp
+ssh_config_options	= Port 5483
+run_dinstall		= 0

@@ -1,0 +1,10 @@
+export EDITOR=vi
+export DEBEMAIL=ghostbar@debian.org
+export BROWSER=firefox3
+export SIDCOW=/var/cache/pbuilder/sid.cow
+export SQUEEZECOW=/var/cache/pbuilder/squeeze.cow
+export LENNYCOW=/var/cache/pbuilder/lenny.cow
+export ETCHCOW=/var/cache/pbuilder/etch.cow
+export BSPATH=$SIDCOW
+export BSPATHEXP=/var/cache/pbuilder/experimental.cow
+#export AWT_TOOLKIT=MToolkit
