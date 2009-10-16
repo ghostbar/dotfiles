@@ -33,12 +33,20 @@ servers = (
   #  }
 );
 
-#chatnets = {
-#  FreeNode = {
-#    type = "IRC";
-#    autosendcmd = "/msg nickserv identify password";
-#  };
-#};
+chatnets = {
+  FreeNode = {
+    type = "IRC";
+    autosendcmd = "";
+  };
+  Debian = {
+    type = "IRC";
+    autosendcmd = "";
+  };
+  Unplug = {
+    type = "IRC";
+    autosendcmd = "";
+  };
+};
 
 channels = (
   {
@@ -249,3 +257,8 @@ hilights = (
 );
 ignores = ( { mask = "BLOG_iPwn3d"; level = "ALL"; } );
 logs = { };
+chatnets = {
+  FreeNode = { type = "IRC"; };
+  Debian = { type = "IRC"; };
+  Unplug = { type = "IRC"; };
+};
