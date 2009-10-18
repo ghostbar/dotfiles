@@ -1,0 +1,15 @@
+[user]
+	name = Jose Luis Rivas
+	email = ghostbar@debian.org
+[alias]
+	ci = commit
+	st = status
+	sta = stash
+	co = checkout
+	br = branch
+[core]
+	excludesfile = /home/ghostbar/.gitignore
+[color]
+	diff = auto
+	status = auto
+	branch = auto
