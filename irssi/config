@@ -34,18 +34,9 @@ servers = (
 );
 
 chatnets = {
-  FreeNode = {
-    type = "IRC";
-    autosendcmd = "";
-  };
-  Debian = {
-    type = "IRC";
-    autosendcmd = "";
-  };
-  Unplug = {
-    type = "IRC";
-    autosendcmd = "";
-  };
+  FreeNode = { type = "IRC"; autosendcmd = ""; };
+  Debian = { type = "IRC"; autosendcmd = ""; };
+  Unplug = { type = "IRC"; autosendcmd = ""; };
 };
 
 channels = (
@@ -255,10 +246,8 @@ hilights = (
   { text = "ghostbar"; nick = "yes"; word = "yes"; },
   { text = "ghostbar_"; nick = "yes"; word = "yes"; }
 );
-ignores = ( { mask = "BLOG_iPwn3d"; level = "ALL"; } );
+ignores = (
+  { mask = "BLOG_iPwn3d"; level = "ALL"; },
+  { mask = "sortadi"; level = "ALL"; }
+);
 logs = { };
-chatnets = {
-  FreeNode = { type = "IRC"; };
-  Debian = { type = "IRC"; };
-  Unplug = { type = "IRC"; };
-};
