@@ -234,7 +234,7 @@ settings = {
     autolog = "yes";
     bell_beeps = "yes";
     beep_msg_level = "HILIGHT MSGS";
-    beep_when_away = "yes";
+    beep_when_away = "no";
     beep_when_window_active = "yes";
   };
   proxy = { irssiproxy_password = "  "; };
