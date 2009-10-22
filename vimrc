@@ -18,8 +18,6 @@ set ruler
 " use incremental search
 set incsearch
 
-"filetype plugin on
-
 " Adding support for markdown syntax
 augroup mkd
     autocmd BufRead *.mkd,*.md,*.markdown  set ai formatoptions=tcroqn2 comments=n:>
