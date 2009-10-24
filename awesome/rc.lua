@@ -341,3 +341,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 os.execute("nm-applet &")
 os.execute("gnome-volume-manager-applet &")
 os.execute("liferea &")
+os.execute("xcompmgr -n &")
