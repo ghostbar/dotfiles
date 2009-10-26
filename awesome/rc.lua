@@ -338,7 +338,11 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 -- autostart
+-- GNOME stuff
 os.execute("nm-applet &")
 os.execute("gnome-volume-control-applet &")
+os.execute("gnome-power-manager &")
+-- RSS reader
 os.execute("liferea &")
+-- transparency support
 os.execute("xcompmgr -n &")
