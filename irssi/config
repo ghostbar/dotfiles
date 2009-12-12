@@ -238,9 +238,7 @@ settings = {
     beep_when_window_active = "yes";
   };
   proxy = { irssiproxy_password = "  "; };
-  "perl/core/scripts" = {
-    beep_cmd = "aplay -q /usr/share/sounds/ekiga/voicemail.wav 2>/dev/null";
-  };
+  "perl/core/scripts" = { beep_cmd = " "; };
 };
 hilights = (
   { text = "ghostbar"; nick = "yes"; word = "yes"; },

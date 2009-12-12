@@ -7,4 +7,4 @@ export LENNYCOW=/var/cache/pbuilder/lenny.cow
 export ETCHCOW=/var/cache/pbuilder/etch.cow
 export BSPATH=$SIDCOW
 export BSPATHEXP=/var/cache/pbuilder/experimental.cow
-#export AWT_TOOLKIT=MToolkit
+export AWT_TOOLKIT=MToolkit

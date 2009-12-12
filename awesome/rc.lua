@@ -346,3 +346,5 @@ os.execute("gnome-power-manager &")
 os.execute("liferea &")
 -- transparency support
 os.execute("xcompmgr -n &")
+-- last bg
+os.execute("awsetbg -l &")

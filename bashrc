@@ -67,6 +67,9 @@ fi
 # Alias for du
 alias howmuch='du -h --max-depth=1'
 
+#alias for nautilus to use only --browser view
+alias nautilus='nautilus --browser'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
