@@ -200,6 +200,13 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+	-- printing screen
+	awful.key({}, "Print", function () awful.util.spawn("/home/ghostbar/bin/scrot") end),
+	-- volume buttons
+	awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("/home/ghostbar/bin/d/volup") end),
+	awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("/home/ghsotbar/bin/d/voldown") end),
+	awful.key({}, "XF86AudioMute", function () awful.util.spawn("/home/ghostbar/bin/d/volmute") end),
+	-- audio player buttons
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
@@ -210,7 +217,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
-    -- Prompt
+    
+	-- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     awful.key({ modkey }, "x",
@@ -221,6 +229,7 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end)
 )
+
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
