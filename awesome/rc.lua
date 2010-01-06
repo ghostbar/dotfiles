@@ -357,3 +357,7 @@ os.execute("liferea &")
 os.execute("xcompmgr -n &")
 -- last bg
 os.execute("awsetbg -l &")
+-- xss
+os.execute("xscreensaver -no-splash &")
+-- dropbox
+os.execute("dropbox start")

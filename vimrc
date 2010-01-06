@@ -12,6 +12,9 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 
+" When I'm pasting activate this mode so autoindent doesn't smash all.
+set pastetoggle=<F2>
+
 " show ruler
 set ruler
 
