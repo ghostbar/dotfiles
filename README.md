@@ -22,4 +22,4 @@ You can check some configs, there are not a lot of comments but sometimes I made
 
 Any question will be answered better by using manpages that by asking me.
 
-And if you want to read more about debian and stuff you can check on my site: [http://ghostbar.ath.cx][http://ghostbar.ath.cx]
+And if you want to read more about debian and stuff you can check on my site: [http://ghostbar.ath.cx](http://ghostbar.ath.cx)
