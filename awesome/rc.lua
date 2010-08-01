@@ -360,4 +360,6 @@ os.execute("awsetbg -l &")
 -- xss
 os.execute("xscreensaver -no-splash &")
 -- dropbox
-os.execute("dropbox start")
+os.execute("dropbox start &")
+-- tomboy
+os.execute("tomboy &")

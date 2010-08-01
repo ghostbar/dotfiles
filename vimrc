@@ -3,6 +3,9 @@
 " Basic setup
 syn on
 
+" Set title on X window
+set title
+
 " Indentation
 set autoindent
 set smartindent

@@ -7,11 +7,11 @@ URxvt*foreground:       	#ffffff
 !URxvt*shading:	        50		!trans, 0=opaque    
 !URxvt*fading:	        30		!term unfocus      
 !URxvt*font:	     		-lfp-gamow-medium-r-normal-*-*-90-*-*-c-*-iso8859-5
-!URxvt*font:			-*-terminus-medium-*-*-*-17-*-*-*-*-*-koi8-*
-#URxvt*font:			xft:Monaco:size=8:antialias
+!URxvt*font:			-*-terminus-*-*-*-*-17-*-*-*-*-*-koi8-*
+!URxvt*font:			xft:Monaco:size=8:antialias
 !URxvt*font:  		xft:matto:antialias=true:size=8
 !URxvt*font:			xft:Bitstream Vera Sans mono:size=9
-URxvt*font:			xft:Terminus:size=8
+!URxvt*font:			xft:Terminus:size=8:antialias
 URxvt*scrollBar:		false
 !URxvt*scrollBar_floating:	true
 !URxvt*scrollBar_right:		false
@@ -20,7 +20,7 @@ URxvt*saveLines:		5500
 !URxvt*termName:		URxvt-ml
 URxvt*cursorColor:		#d8d8d8
 URxvt*colorBD:		lightyellow
-URxvt*colorUL:		yellow   
+URxvt*colorUL:		yellow
 
 !colors
 !black

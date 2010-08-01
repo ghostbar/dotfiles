@@ -1,7 +1,3 @@
-Host git.rivco.net
-	HostName git.rivco.net
-	User git
-	Port 5483
 Host git.debian.org
 	HostName git.debian.org
 	User ghostbar
@@ -9,6 +5,8 @@ Host svn.debian.org
 	HostName svn.debian.org
 	User ghostbar
 Host akkad
-	HostName rivco.net
+	HostName 192.168.1.105
 	User ghostbar
-	Port 5483
+Host chaldea
+	HostName 74.207.227.235
+	user ghostbar
