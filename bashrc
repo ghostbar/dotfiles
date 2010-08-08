@@ -65,7 +65,7 @@ fi
 #alias l='ls -CF'
 
 # Alias for du
-alias howmuch='du -h --max-depth=1'
+alias howmuch='du -h --max-depth=1 --exclude="./.*"'
 
 #alias for nautilus to use only --browser view
 alias nautilus='nautilus --browser'
@@ -85,4 +85,4 @@ if [ -f ~/.bash_vars ]; then
 fi
 
 # enabling ~/bin for command path search
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/home/ghostbar/bin"
