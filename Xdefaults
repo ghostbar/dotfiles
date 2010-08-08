@@ -22,6 +22,12 @@ URxvt*cursorColor:		#d8d8d8
 URxvt*colorBD:		lightyellow
 URxvt*colorUL:		yellow
 
+! Launching URLs from urxvt (from: http://quadpoint.org/articles/irssi#launching_urls_from_rxvt-unicode_urxvt)
+urxvt*perl-lib:			/usr/lib/urxvt/perl/
+urxvt*perl-ext-common:	default,matcher
+urxvt*matcher.button:	1
+urxvt*urlLauncher:		/usr/bin/google-chrome
+
 !colors
 !black
 URxvt*color0:		#676767
