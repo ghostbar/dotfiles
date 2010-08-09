@@ -86,3 +86,6 @@ fi
 
 # enabling ~/bin for command path search
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/home/ghostbar/bin"
+
+# Shut up the fucking bell!!
+xset b off
