@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ghostbar/dev/debian/sponsoring/apostols/daa2iso/daa2iso-0.1.7e/src'
-let g:netrw_dirhist_2='/home/ghostbar/.mozilla/firefox/szdcn9p2.default/extensions/{64161300-e22b-11db-8314-0800200c9a66}'
-let g:netrw_dirhist_3='/home/ghostbar/.mozilla/firefox/szdcn9p2.default/extensions/firebug@software.joehewitt.com'
-let g:netrw_dirhist_4='/home/ghostbar/dev/www/uni.org.ve/uni-theme/style'
-let g:netrw_dirhist_5='/etc/defoma'
-let g:netrw_dirhist_6='/etc/nginx/sites-enabled'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/ghostbar/.config/google-chrome'
