@@ -1,0 +1,31 @@
+[general]
+ui = TTY.TTYUI
+accounts = GMail,RIVCO
+
+[Account GMail]
+localrepository = GMail-Local
+remoterepository = GMail-Remote
+
+[Account RIVCO]
+localrepository = RIVCO-Local
+remoterepository = RIVCO-Remote
+
+[Repository GMail-Local]
+type = Maildir
+localfolders = ~/Mail/GMail
+
+[Repository RIVCO-Local]
+type = Maildir
+localfolders = ~/Mail/RIVCO
+
+[Repository GMail-Remote]
+type = Gmail
+remoteuser = ghostbar38@gmail.com
+remotepassfile = ~/.offlineimap/GMail.pass
+realdelete = no
+
+[Repository RIVCO-Remote]
+type = Gmail
+remoteuser = joseluis@rivco.net
+remotepassfile = ~/.offlineimap/RIVCO.pass
+realdelete = no
