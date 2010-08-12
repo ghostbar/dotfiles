@@ -1,6 +1,7 @@
 [general]
 ui = TTY.TTYUI
 accounts = GMail,RIVCO
+maxsynaccounts = 2
 
 [Account GMail]
 localrepository = GMail-Local
@@ -22,10 +23,24 @@ localfolders = ~/Mail/RIVCO
 type = Gmail
 remoteuser = ghostbar38@gmail.com
 remotepassfile = ~/.offlineimap/GMail.pass
+#folderfilter = lambda foldername: foldername not in '[Google Mail]/All Mail'
 realdelete = no
+trashfolder = [Google Mail]/Bin
+spamfolder = [Google Mail]/Spam
 
 [Repository RIVCO-Remote]
 type = Gmail
 remoteuser = joseluis@rivco.net
 remotepassfile = ~/.offlineimap/RIVCO.pass
+#folderfilter = lambda foldername: foldername not in '[Gmail]/All Mail'
 realdelete = no
+
+# Mailbox name recorder
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"

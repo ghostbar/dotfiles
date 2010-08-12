@@ -1,0 +1,88 @@
+
+# Main configuration
+set mbox_type			= Maildir
+#set mbox				= "~/Mail/inbox/"
+set spoolfile			= "+RIVCO/INBOX"
+set folder				= "~/Mail/"
+set timeout				= 3
+set mail_check			= 0
+set sort_alias			= alias
+set reverse_alias
+
+# Index options
+set sort				= threads
+set sort_aux			= reverse-last-date-received
+set uncollapse_jump		
+set sort_re
+set reply_regexp		= "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+# pager options
+set pager_index_lines   = 5
+#set pager_context       = 5
+set pager_stop
+set menu_scroll 
+set smart_wrap
+set tilde
+unset markers
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+set date_format         = "%d/%m/%y, %I:%M%P"
+set index_format        = "%3C [%Z] %D %-15.15F %s"
+set status_format       = "[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+set alias_format        = "%4n %t %-20a  %r"
+
+# composing mail
+set realname			= "Jose Luis Rivas"
+set envelope_from		= yes
+set use_from			= yes
+set sig_dashes			= yes
+set edit_headers		= yes
+set fast_reply
+set sendmail_wait		= -1
+set askcc
+set fcc_attach
+unset mime_forward
+set forward_format		= "Fwd: %s"
+set forward_decode
+set attribution			= "El %d, %n escribió:"
+set reply_to
+set reverse_name
+set include				= yes
+set forward_quote
+set indent_str			= "> "
+
+# Headers
+ignore *
+unignore from resent-from reply-to x-mailer user-agent date to cc subject
+hdr_order From: Resent-From: Reply-To: X-Mailer: User-Agent: Date: To: Cc: Subject:
+
+#set record				= "~/Mail/sent/"
+#set postponed			= "~/Mail/postponed/"
+set include				= ask-yes
+set print				= ask-yes
+set postpone			= ask-yes
+
+# Directories
+set alias_file			= ~/.mutt/alias
+set header_cache		= ~/.mutt/cache/headers
+set message_cachedir	= ~/.mutt/cache/bodies
+set	certificate_file	= ~/.mutt/certificates
+set mailcap_path		= ~/.mutt/mailcap
+set signature			= ~/.mutt/signature
+set tmpdir				= ~/.mutt/temp
+
+# Commands
+set editor				= "/usr/bin/vim +/^$"
+set ispell				= "/usr/bin/aspell -e -c"
+
+# Modular settings
+source "~/.mutt/colors"
+source "~/.mutt/abook"
+# source "~/.mutt/urlview"
+source "~/.mutt/mailboxes"
+source "~/.mutt/rivco.muttrc"
+source "~/.mutt/keybindings"
+
+# Accounts
+folder-hook GMail/* source ~/.mutt/gmail.muttrc
+folder-hook RIVCO/* source ~/.mutt/rivco.muttrc

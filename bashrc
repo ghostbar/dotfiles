@@ -70,6 +70,9 @@ alias howmuch='du -h --max-depth=1 --exclude="./.*"'
 #alias for nautilus to use only --browser view
 alias nautilus='nautilus --browser'
 
+# Alias for tagging with svn-buildpackage
+alias pp-tag='svn-buildpackage --svn-tag-only'
+
 alias google-chrome='google-chrome --enable-extension-timeline-api'
 
 # enable programmable completion features (you don't need to enable
