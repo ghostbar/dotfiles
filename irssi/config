@@ -1,12 +1,12 @@
 servers = (
-#  {
-#    address = "irc.freenode.net";
-#    chatnet = "FreeNode";
-#    port = "6667";
-#    use_ssl = "no";
-#    ssl_verify = "no";
-#    autoconnect = "yes";
-#  },
+  #  {
+  #    address = "irc.freenode.net";
+  #    chatnet = "FreeNode";
+  #    port = "6667";
+  #    use_ssl = "no";
+  #    ssl_verify = "no";
+  #    autoconnect = "yes";
+  #  },
   {
     address = "ircs.oftc.net";
     chatnet = "Debian";
@@ -34,17 +34,17 @@ servers = (
 );
 
 chatnets = {
-#  FreeNode = { type = "IRC"; autosendcmd = ""; };
+  #  FreeNode = { type = "IRC"; autosendcmd = ""; };
   Debian = { type = "IRC"; autosendcmd = ""; };
   Unplug = { type = "IRC"; autosendcmd = ""; };
 };
 
 channels = (
-#  {
-#    name = "#debian-es,#talug,#velug";
-#    chatnet = "freenode";
-#    autojoin = "yes";
-#  },
+  #  {
+  #    name = "#debian-es,#talug,#velug";
+  #    chatnet = "freenode";
+  #    autojoin = "yes";
+  #  },
   {
     name = "#debian-devel,#debian-es,#debian-ve,#debian-perl";
     chatnet = "Debian";
@@ -239,7 +239,7 @@ settings = {
   };
   proxy = { irssiproxy_password = "  "; };
   "perl/core/scripts" = {
-    beep_cmd = "aplay -q /usr/share/sounds/ekiga/voicemail.wav 2>/dev/null";
+    beep_cmd = "ogg123 -q /usr/share/sounds/freedesktop/stereo/complete.oga &";
   };
 };
 hilights = (
@@ -248,7 +248,8 @@ hilights = (
 );
 ignores = (
   { mask = "BLOG_iPwn3d"; level = "ALL"; },
-  { mask = "sortadi"; level = "ALL"; },
-  { mask = "iMorcilla"; level = "ALL"; }
+  { mask = "iMorcilla"; level = "ALL"; },
+  { mask = "iArrecho"; level = "ALL"; },
+  { mask = "iBash"; level = "ALL"; }
 );
 logs = { };
