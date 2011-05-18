@@ -21,8 +21,11 @@ set pastetoggle=<F2>
 " show ruler
 set ruler
 
+" Search related stuff
 " use incremental search
 set incsearch
+set ignorecase     " Do case insensitive matching
+set smartcase      " Do smart case matching
 
 " Adding support for markdown syntax
 augroup mkd
@@ -47,8 +50,6 @@ filetype plugin on
 " Copying some rules from /etc/vimrc that are commented
 set showcmd        " Show (partial) command in status line.
 set showmatch      " Show matching brackets.
-set ignorecase     " Do case insensitive matching
-set smartcase      " Do smart case matching
 set autowrite      " Automatically save before commands like :next and :make
 set hidden         " Hide buffers when they are abandoned
 set mouse=a        " Enable mouse usage (all modes)
