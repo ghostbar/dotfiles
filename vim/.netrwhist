@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/ghostbar/.config/google-chrome'
+let g:netrw_dirhist_2='/etc/NetworkManager/system-connections'
+let g:netrw_dirhist_3='/home/ghostbar/tmp/mysql/mysql-5.1-5.1.49/debian'
+let g:netrw_dirhist_4='/home/ghostbar/Code/debian/perl/libhash-merge-simple-perl/svn/debian'
+let g:netrw_dirhist_5='/home/ghostbar/Code/debian/perl/libtemplate-plugin-javascript-perl/svn/debian/source'
+let g:netrw_dirhist_6='/home/ghostbar/Code/debian/pino/pino3/debian'
+let g:netrw_dirhist_7='/home/ghostbar/Code/debian/ease/ubuntu/ease-0.4/debian'
