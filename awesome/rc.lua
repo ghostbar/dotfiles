@@ -15,7 +15,7 @@ require("debian.menu")
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -167,6 +167,8 @@ root.buttons(awful.util.table.join(
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
+	awful.key({					  }, "XF86Back", awful.tag.viewprev		),
+	awful.key({ 		 		  }, "XF86Forward", awful.tag.viewnext  ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
@@ -203,9 +205,9 @@ globalkeys = awful.util.table.join(
 	-- printing screen
 	awful.key({}, "Print", function () awful.util.spawn("/home/ghostbar/bin/scrot") end),
 	-- volume buttons
-	awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("/home/ghostbar/bin/d/volup") end),
-	awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("/home/ghsotbar/bin/d/voldown") end),
-	awful.key({}, "XF86AudioMute", function () awful.util.spawn("/home/ghostbar/bin/d/volmute") end),
+	awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 2+") end),
+	awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 2+") end),
+	awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer set Master mute") end),
 	-- audio player buttons
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
@@ -351,6 +353,8 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 os.execute("nm-applet &")
 os.execute("gnome-volume-control-applet &")
 os.execute("gnome-power-manager &")
+os.execute("bluetooth-applet &")
+os.execute("gnome-settings-daemon &")
 -- RSS reader
 os.execute("liferea &")
 -- transparency support
