@@ -7,6 +7,12 @@ Host svn.debian.org
 Host akkad
 	HostName 192.168.1.105
 	User ghostbar
-Host chaldea
-	HostName 74.207.227.235
+Host kish
+	HostName kish.eserre.com
 	user ghostbar
+Host chaldeaweb
+	HostName kish.eserre.com
+	user www-data
+Host kishweb
+	HostName kish.eserre.com
+	user www-data
