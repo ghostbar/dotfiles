@@ -10,10 +10,10 @@ set title
 set autoindent
 set smartindent
 
-" Use 4-spaces instead of tabs
+" Use 2-spaces instead of tabs
 " set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " When I'm pasting activate this mode so autoindent doesn't smash all.
 set pastetoggle=<F2>
