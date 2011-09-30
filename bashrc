@@ -47,9 +47,9 @@ esac
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
@@ -64,17 +64,6 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
-# Alias for du
-alias howmuch='du -h --max-depth=1 --exclude="./.*"'
-
-#alias for nautilus to use only --browser view
-alias nautilus='nautilus --browser'
-
-# Alias for tagging with svn-buildpackage
-alias pp-tag='svn-buildpackage --svn-tag-only'
-
-alias google-chrome='google-chrome --enable-extension-timeline-api'
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -88,7 +77,9 @@ if [ -f ~/.bash_vars ]; then
 fi
 
 # enabling ~/bin for command path search
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/home/ghostbar/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/games:/home/ghostbar/bin"
+
+export PATH="$PATH:/home/ghostbar/Code/www/drupal/drush"
 
 # Shut up the fucking bell!!
 xset b off
