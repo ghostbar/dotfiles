@@ -13,7 +13,7 @@ servers = (
     port = "6697";
     use_ssl = "yes";
     ssl_verify = "no";
-    autoconnect = "no";
+    autoconnect = "yes";
   },
   {
     address = "irc.unplug.org.ve";
@@ -21,7 +21,7 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "no";
+    autoconnect = "yes";
   },
   #  {
   #    address = "irc.debian.org";
@@ -216,7 +216,7 @@ settings = {
     nick = "ghostbar";
     use_proxy = "no";
     proxy_port = "3128";
-    proxy_address = "joseluis.rivas:G4rb4g3c0ll3c70r@150.187.65.3";
+    proxy_address = "127.0.0.1";
     proxy_string = "CONNECT %s:%d";
     proxy_password = "";
     proxy_string_after = "";
