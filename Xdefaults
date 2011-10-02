@@ -1,6 +1,6 @@
 URxvt*geometry:         	80x25
-URxvt*background:       	#000000
-URxvt*foreground:       	#ffffff
+!URxvt*background:       	#000000
+!URxvt*foreground:       	#ffffff
 !URxvt*inheritPixmap:    	true
 !URxvt*reverseVideo:		false
 !URxvt*tintColor:        	#dfdfdf
@@ -22,7 +22,9 @@ URxvt*cursorColor:		#d8d8d8
 URxvt*colorBD:		lightyellow
 URxvt*colorUL:		yellow
 
-! Launching URLs from urxvt (from: http://quadpoint.org/articles/irssi#launching_urls_from_rxvt-unicode_urxvt)
+URxvt*borderLess: false
+
+!Launching URLs from urxvt (from: http://quadpoint.org/articles/irssi#launching_urls_from_rxvt-unicode_urxvt)
 urxvt*perl-lib:			/usr/lib/urxvt/perl/
 urxvt*perl-ext-common:	default,matcher
 urxvt*matcher.button:	1
@@ -63,7 +65,7 @@ urxvt*color4: #004f9e
 urxvt*color5: #ec0048
 urxvt*color6: #2aa7e7
 urxvt*color7: #f2f2f2
-urxvt*color8: #1d202f
+urxvt*color8: #383e5b
 urxvt*color9: #ff361e
 urxvt*color10: #ffc005
 urxvt*color11: #93ff00
@@ -72,5 +74,5 @@ urxvt*color13: #ef0051
 urxvt*color14: #4bb8fd
 urxvt*color15: #a020f0
 urxvt*transparent: true
-urxvt*shading: 50
+urxvt*shading: 25
 urxvt*fading: 50
