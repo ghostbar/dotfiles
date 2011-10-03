@@ -56,3 +56,9 @@ set mouse=a        " Enable mouse usage (all modes)
 
 " Mapping NERD_Tree toggle command to F3
 map <F3> :NERDTreeToggle<CR>
+
+" Mapping xclip clipboard support
+" F6 for yank
+vmap <F6> :!xclip -f -sel clip<CR>
+" F7 for put
+map <F7> mz:-1r !xclip -o -sel clip<CR>`z
