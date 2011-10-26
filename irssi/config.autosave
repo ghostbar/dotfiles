@@ -2,8 +2,8 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "FreeNode";
-    port = "6667";
-    use_ssl = "no";
+    port = "6697";
+    use_ssl = "yes";
     ssl_verify = "no";
     autoconnect = "yes";
   },
@@ -13,7 +13,7 @@ servers = (
     port = "6697";
     use_ssl = "yes";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
     address = "irc.unplug.org.ve";
@@ -21,7 +21,7 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   #  {
   #    address = "irc.debian.org";
@@ -34,31 +34,18 @@ servers = (
 );
 
 chatnets = {
-  FreeNode = {
-    type = "IRC";
-    autosendcmd = "/msg nickserv identify n0l3e7";
-  };
-  Debian = {
-    type = "IRC";
-    autosendcmd = "/msg nickserv identify n0l3e7";
-  };
-  Unplug = {
-    type = "IRC";
-    autosendcmd = "/msg nickserv identify n0l3e7";
-  };
+  FreeNode = { type = "IRC"; autosendcmd = ""; };
+  Debian = { type = "IRC"; autosendcmd = ""; };
+  Unplug = { type = "IRC"; autosendcmd = ""; };
 };
 
 channels = (
   {
-    name = "#debian-es,#talug,#velug";
+    name = "##sts,#drupal-contribute,#drupal-themes,#open_atrium";
     chatnet = "freenode";
     autojoin = "yes";
   },
-  {
-    name = "#debian-devel,#debian-kbsd,#debian-devel-es,#debian-es,#debian-mentors-es,#debian-ve,#debian-perl,#awesome";
-    chatnet = "Debian";
-    autojoin = "yes";
-  },
+  { name = "#debian-perl"; chatnet = "Debian"; autojoin = "yes"; },
   { name = "#unplug"; chatnet = "unplug"; autojoin = "yes"; }
 );
 
@@ -226,7 +213,7 @@ settings = {
   core = {
     real_name = "Jose Luis Rivas";
     user_name = "ghostbar";
-    nick = "ghostbar_";
+    nick = "ghostbar";
     use_proxy = "no";
     proxy_port = "3128";
     proxy_address = "joseluis.rivas:G4rb4g3c0ll3c70r@150.187.65.3";
@@ -235,23 +222,28 @@ settings = {
     proxy_string_after = "";
   };
   "fe-text" = { term_force_colors = "no"; actlist_sort = "refnum"; };
-  "irc/core" = { skip_motd = "yes"; };
+  "irc/core" = {
+    skip_motd = "yes";
+    part_message = "For my cows and goats! There's an exit button!!";
+  };
   "fe-common/core" = {
     timestamps = "yes";
     completion_auto = "yes";
     theme = "default";
     autolog = "yes";
-    bell_beeps = "no";
+    bell_beeps = "yes";
     beep_msg_level = "HILIGHT MSGS";
     beep_when_away = "no";
-    beep_when_window_active = "no";
+    beep_when_window_active = "yes";
   };
   proxy = { irssiproxy_password = "  "; };
-  "perl/core/scripts" = { beep_cmd = " "; };
+  "perl/core/scripts" = {
+    beep_cmd = "play -q /usr/share/sounds/freedesktop/stereo/complete.oga > /dev/null 2>&1 &";
+  };
 };
 hilights = (
   { text = "ghostbar"; nick = "yes"; word = "yes"; },
   { text = "ghostbar_"; nick = "yes"; word = "yes"; }
 );
-ignores = ( { mask = "BLOG_iPwn3d"; level = "ALL"; } );
+ignores = ( );
 logs = { };

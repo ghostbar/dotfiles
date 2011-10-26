@@ -80,6 +80,3 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/games:/home/ghostbar/bin"
 
 export PATH="$PATH:/home/ghostbar/Code/www/drupal/drush"
-
-# Shut up the fucking bell!!
-xset b off
