@@ -25,8 +25,8 @@ servers = (
   },
 	{
 		address = "irc.dairc.net";
-		chatnet = "DaIRC"
-		port = "6669";
+		chatnet = "DaIRC";
+		port = "6668";
 		use_ssl = "no";
 		ssl_verify = "no";
 		autoconnect = "yes";
