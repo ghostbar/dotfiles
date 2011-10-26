@@ -62,3 +62,7 @@ map <F3> :NERDTreeToggle<CR>
 vmap <F6> :!xclip -f -sel clip<CR>
 " F7 for put
 map <F7> mz:-1r !xclip -o -sel clip<CR>`z
+
+if &term == "screen"
+	set term=xterm
+endif
