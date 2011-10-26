@@ -23,6 +23,14 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   },
+	{
+		address = "irc.dairc.net";
+		chatnet = "DaIRC"
+		port = "6669";
+		use_ssl = "no";
+		ssl_verify = "no";
+		autoconnect = "yes";
+	}
   #  {
   #    address = "irc.debian.org";
   #    chatnet = "Debian";
@@ -37,16 +45,18 @@ chatnets = {
   FreeNode = { type = "IRC"; autosendcmd = ""; };
   Debian = { type = "IRC"; autosendcmd = ""; };
   Unplug = { type = "IRC"; autosendcmd = ""; };
+	DaIRC = { type = "IRC"; autosendcmd = ""; };
 };
 
 channels = (
   {
-    name = "##sts,#drupal-contribute,#drupal-themes,#open_atrium";
+    name = "##sts,#drupal-contribute,#drupal-themes,#open_atrium,#sierra_nevada";
     chatnet = "freenode";
     autojoin = "yes";
   },
-  { name = "#debian-perl"; chatnet = "Debian"; autojoin = "yes"; },
+  { name = "#debian-perl,#linode"; chatnet = "Debian"; autojoin = "yes"; },
   { name = "#unplug"; chatnet = "unplug"; autojoin = "yes"; }
+	{ name = "#frantech"; chatnet = "dairc"; autojoin = "yes"; }
 );
 
 aliases = {

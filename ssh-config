@@ -4,15 +4,26 @@ Host git.debian.org
 Host svn.debian.org
 	HostName svn.debian.org
 	User ghostbar
-Host akkad
-	HostName 192.168.1.105
-	User ghostbar
 Host kish
 	HostName kish.eserre.com
 	user ghostbar
 Host chaldeaweb
 	HostName kish.eserre.com
 	user www-data
+	IdentityFile ~/.ssh/id_rsa_weak
 Host kishweb
 	HostName kish.eserre.com
 	user www-data
+	IdentityFile ~/.ssh/id_rsa_weak
+#Host eserre.com
+#	HostName kish.eserre.com
+#	IdentityFile ~/.ssh/id_rsa_weak
+Host mors
+	HostName 46.16.233.147
+	user root
+Host mises
+	HostName mises.eserre.com
+	user ghostbar
+Host rand
+	HostName rand.eserre.com
+	user ghostbar
