@@ -1,22 +1,14 @@
 " ~/.vimrc from Jose Luis Rivas <ghostbar@debian.org>
 
 " Basic setup
-syn on
+syn on " syntax on always, I like colors.
 
 " Set title on X window
 set title
 
 " Indentation
-set autoindent
-set smartindent
-
-" Use 2-spaces instead of tabs
-" set expandtab
-set tabstop=2
-set shiftwidth=2
-
-" When I'm pasting activate this mode so autoindent doesn't smash all.
-set pastetoggle=<F2>
+set autoindent " Keep indentation from previous line
+set smartindent " Automatically inserts indentation in some cases
 
 " show ruler
 set ruler
@@ -27,9 +19,18 @@ set incsearch
 set ignorecase     " Do case insensitive matching
 set smartcase      " Do smart case matching
 
+
+" Use 2-spaces instead of tabs
+" set expandtab
+set tabstop=2
+set shiftwidth=2
+
+" When I'm pasting activate this mode so autoindent doesn't smash all.
+set pastetoggle=<F2>
+
 " Adding support for markdown syntax
 augroup mkd
-    autocmd BufRead *.mkd,*.md,*.markdown  set ts=2 sw=2 ai formatoptions=tcroqn2 comments=n:>
+  autocmd BufRead *.mkd,*.md,*.markdown  set ts=2 sw=2 ai formatoptions=tcroqn2 comments=n:>
 augroup END
 
 " Load identation rules according to filetype
@@ -63,6 +64,7 @@ vmap <F6> :!xclip -f -sel clip<CR>
 " F7 for put
 map <F7> mz:-1r !xclip -o -sel clip<CR>`z
 
+" Making vim work as should while using tmux with $TERM="screen"
 if &term == "screen"
 	set term=xterm
 endif
