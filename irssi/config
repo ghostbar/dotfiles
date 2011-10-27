@@ -23,14 +23,14 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   },
-	{
-		address = "irc.dairc.net";
-		chatnet = "DaIRC";
-		port = "6668";
-		use_ssl = "no";
-		ssl_verify = "no";
-		autoconnect = "yes";
-	}
+  {
+    address = "irc.dairc.net";
+    chatnet = "DaIRC";
+    port = "6668";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
   #  {
   #    address = "irc.debian.org";
   #    chatnet = "Debian";
@@ -39,13 +39,22 @@ servers = (
   #    ssl_verify = "no";
   #    autoconnect = "yes";
   #  }
+  {
+    address = "irc.ramhost.us";
+    chatnet = "RAMHost";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
 );
 
 chatnets = {
   FreeNode = { type = "IRC"; autosendcmd = ""; };
   Debian = { type = "IRC"; autosendcmd = ""; };
   Unplug = { type = "IRC"; autosendcmd = ""; };
-	DaIRC = { type = "IRC"; autosendcmd = ""; };
+  DaIRC = { type = "IRC"; autosendcmd = ""; };
+  RAMHost = { type = "IRC"; };
 };
 
 channels = (
@@ -54,9 +63,14 @@ channels = (
     chatnet = "freenode";
     autojoin = "yes";
   },
-  { name = "#debian-perl,#linode"; chatnet = "Debian"; autojoin = "yes"; },
-  { name = "#unplug"; chatnet = "unplug"; autojoin = "yes"; }
-	{ name = "#frantech"; chatnet = "dairc"; autojoin = "yes"; }
+  {
+    name = "#debian-perl,#linode";
+    chatnet = "Debian";
+    autojoin = "yes";
+  },
+  { name = "#unplug"; chatnet = "unplug"; autojoin = "yes"; },
+  { name = "#frantech"; chatnet = "dairc"; autojoin = "yes"; },
+  { name = "#ramhost"; chatnet = "RAMHost"; autojoin = "yes"; }
 );
 
 aliases = {
