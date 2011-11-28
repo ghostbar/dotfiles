@@ -3,6 +3,9 @@
 " Basic setup
 syn on " syntax on always, I like colors.
 
+" No vi-compatible mode
+set nocp " This way things like modelines works out-of-box and more stuff
+
 " Set title on X window
 set title
 
@@ -60,11 +63,19 @@ map <F3> :NERDTreeToggle<CR>
 
 " Mapping xclip clipboard support
 " F6 for yank
-vmap <F6> :!xclip -f -sel clip<CR>
+" vmap <F6> :!xclip -f -sel clip<CR>
+vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
 " F7 for put
-map <F7> mz:-1r !xclip -o -sel clip<CR>`z
+"map <F7> mz:-1r !xclip -o -sel clip<CR>`z
+nmap <F7> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 
 " Making vim work as should while using tmux with $TERM="screen"
 if &term == "screen"
 	set term=xterm
 endif
+
+" Set solarized colorscheme
+"syntax enable
+"set background=dark
+"set t_Co=16
+"colorscheme solarized
