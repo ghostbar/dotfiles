@@ -32,9 +32,9 @@ set shiftwidth=2
 set pastetoggle=<F2>
 
 " Adding support for markdown syntax
-augroup mkd
-  autocmd BufRead *.mkd,*.md,*.markdown  set ts=2 sw=2 ai formatoptions=tcroqn2 comments=n:>
-augroup END
+"augroup mkd
+"  autocmd BufRead *.mkd,*.md,*.markdown  set ts=2 sw=2 ai formatoptions=tcroqn2 comments=n:>
+"augroup END
 
 " Load identation rules according to filetype
 if has("autocmd")
