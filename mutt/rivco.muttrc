@@ -9,3 +9,5 @@ set postponed 	= "+RIVCO/[Google].Drafts"
 macro index E "<change-folder>+RIVCO/[Google].All Mail<enter><limit>~B"	"Search everything"
 macro index D "<save-message>+RIVCO/[Google].Bin<enter>" "Trash it!"
 macro index S "<save-message>+RIVCO/[Google].Spam<enter"> "Spam it!"
+
+# vim: set ft=muttrc:
