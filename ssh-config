@@ -4,6 +4,7 @@ Host git.debian.org
 Host svn.debian.org
 	HostName svn.debian.org
 	User ghostbar
+# Linode VPSes
 Host kish
 	HostName kish.eserre.com
 	user ghostbar
@@ -21,9 +22,15 @@ Host kishweb
 Host mors
 	HostName 46.16.233.147
 	user root
+# BuyVM VPSes
 Host mises
 	HostName mises.eserre.com
 	user ghostbar
 Host rand
 	HostName rand.eserre.com
+	user ghostbar
+# RamHost VPSes
+## TinyVZ
+Host hayek
+	HostName hayek.eserre.com
 	user ghostbar
