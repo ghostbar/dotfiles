@@ -34,3 +34,8 @@ Host rand
 Host hayek
 	HostName hayek.eserre.com
 	user ghostbar
+
+Host bqm
+	HostName bqm.sts.net.ve
+	user jrivas
+	Port 2280
