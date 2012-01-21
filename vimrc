@@ -1,5 +1,8 @@
 " ~/.vimrc from Jose Luis Rivas <ghostbar@debian.org>
 
+" Activating pathogen
+call pathogen#infect()
+
 " Basic setup
 syn on " syntax on always, I like colors.
 
