@@ -80,5 +80,3 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/games:/home/ghostbar/bin"
 
 export PATH="$PATH:/home/ghostbar/Code/www/drupal/drush"
-export PATH=$HOME/local/bin:$PATH
-export PATH=$HOME/node_modules/express/bin:$PATH
