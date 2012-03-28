@@ -29,6 +29,12 @@ Host mises
 Host rand
 	HostName rand.eserre.com
 	user ghostbar
+Host demiranda
+	HostName demiranda.eserre.com
+	user ghostbar
+Host delaboetie
+	HostName delaboetie.eserre.com
+	user ghostbar
 # RamHost VPSes
 ## TinyVZ
 Host hayek
