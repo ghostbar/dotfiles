@@ -1,0 +1,51 @@
+# Netfilter/IPTables - block suspicious traffic
+
+/sbin/iptables -N DROP_TCP_SUSPICIOUS
+
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --sport 0:19 -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --dport 0:19 -j DROP
+
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK             -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK             -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL PSH,ACK         -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL PSH,ACK         -m state --state NEW         -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL PSH,ACK         -m state --state RELATED     -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL NONE                                         -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ALL                                          -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags SYN,FIN SYN,FIN                                  -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags SYN,RST SYN,RST                                  -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags RST,FIN RST,FIN                                  -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags SYN,URG SYN,URG                                  -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN,PSH                                      -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN,ACK,PSH                                  -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ACK,FIN FIN                                      -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ACK,PSH PSH                                      -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ACK,URG URG                                      -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST             -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST             -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags SYN,ACK NONE                                     -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN             -m state --state NEW         -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN             -m state --state RELATED     -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN             -m state --state ESTABLISHED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN,ACK         -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL SYN,ACK         -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL FIN,ACK         -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL FIN,ACK         -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK         -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK         -m state --state NEW         -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK         -m state --state RELATED     -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK,PSH,RST     -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK,PSH,RST     -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL FIN,PSH,ACK     -m state --state ESTABLISHED -j RETURN
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL FIN,PSH,ACK     -m state --state NEW,RELATED -j DROP
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK,PSH
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK,URG
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL RST,ACK,PSH,URG
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL FIN,PSH,ACK,URG
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK,URG
+/sbin/iptables -A DROP_TCP_SUSPICIOUS -p tcp --tcp-flags ALL ACK,URG,FIN
+
+/sbin/iptables -A INPUT   -i ! lo+ -p tcp -j DROP_TCP_SUSPICIOUS
+/sbin/iptables -A FORWARD          -p tcp -j DROP_TCP_SUSPICIOUS
+/sbin/iptables -A OUTPUT           -p tcp -j DROP_TCP_SUSPICIOUS
+

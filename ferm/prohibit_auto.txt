@@ -1,0 +1,25 @@
+# Netfilter/IPtables - disallow with automatic protocol-based determination
+# Note: use -j PROHIBIT_AUTO instead of -j REJECT i.e.
+
+/sbin/iptables -N PROHIBIT_AUTO
+
+# reject TCP protocol
+
+/sbin/iptables -A PROHIBIT_AUTO -p tcp --tcp-flags RST RST -j DROP
+/sbin/iptables -A PROHIBIT_AUTO -p tcp -j REJECT --reject-with tcp-reset
+
+# reject UDP protocol
+
+/sbin/iptables -A PROHIBIT_AUTO -p udp -j REJECT --reject-with port-unreach
+
+# reject ICMP protocol
+
+/sbin/iptables -A PROHIBIT_AUTO -p icmp --icmp-type destination-unreachable -j DROP
+/sbin/iptables -A PROHIBIT_AUTO -p icmp --icmp-type time-exceeded -j DROP
+/sbin/iptables -A PROHIBIT_AUTO -p icmp --icmp-type parameter-problem -j DROP
+/sbin/iptables -A PROHIBIT_AUTO -p icmp -j REJECT --reject-with host-unreach
+
+# reject the remaing
+
+/sbin/iptables -A PROHIBIT_AUTO -j REJECT --reject-with proto-unreach
+

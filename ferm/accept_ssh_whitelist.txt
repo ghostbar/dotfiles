@@ -1,0 +1,14 @@
+# Netfilter/IPtables - allowing SSH request w/ whitelist
+
+# prepare a whitelist chain
+
+/sbin/iptables -N SSH_WHITELIST
+/sbin/iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --set --name SSH
+/sbin/iptables -A INPUT -p tcp --dport 22 -m state --state NEW -j SSH_WHITELIST
+/sbin/iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 4 --rttl --name SSH -j LOG --log-prefix "SSH Brute Force "
+/sbin/iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 4 --rttl --name SSH -j DROP 
+
+# add a new IP address (12.34.56.78) into the whitelist
+
+/sbin/iptables -A SSH_WHITELIST -s 12.34.56.78 -m recent --remove --name SSH -j ACCEPT
+

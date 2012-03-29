@@ -1,0 +1,11 @@
+# Netfilter/IPTables - block suspicious UDP traffic
+
+/sbin/iptables -N DROP_UDP_SUSPICIOUS
+
+/sbin/iptables -A DROP_UDP_SUSPICIOUS -p udp --sport 0:21 -j DROP
+/sbin/iptables -A DROP_UDP_SUSPICIOUS -p udp --dport 0:21 -j DROP
+
+/sbin/iptables -A INPUT   -i ! lo+ -p udp -j DROP_UDP_SUSPICIOUS
+/sbin/iptables -A FORWARD          -p udp -j DROP_UDP_SUSPICIOUS
+/sbin/iptables -A OUTPUT           -p udp -j DROP_UDP_SUSPICIOUS
+

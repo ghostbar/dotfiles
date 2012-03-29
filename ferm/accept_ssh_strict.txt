@@ -1,0 +1,5 @@
+# Netfilter/IPtables - allow SSH connections very strictly
+
+/sbin/iptables -N SSH_STRICT
+/sbin/iptables -A SSH_STRICT -p tcp ! -f -m connbytes --connbytes 0:255 -m state --state ESTABLISHED -m length --length 46:375 -m u32 --u32 "0>>22&0x3C@ 12>>26&0x3C@ 0=0x5353482D" -j ACCEPT
+
