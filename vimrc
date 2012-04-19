@@ -44,6 +44,11 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" CoffeeScript should use spaces instead of tabs
+augroup coffee
+	autocmd BufRead *.coffee	set expandtab
+augroup END
+
 
 " TSkeleton setup
 "autocmd BufNewFile *.h	TSkeletonSetup skeleton.h
