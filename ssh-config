@@ -19,6 +19,17 @@ Host kishweb
 #Host eserre.com
 #	HostName kish.eserre.com
 #	IdentityFile ~/.ssh/id_rsa_weak
+
+# Sebastián Miranda Files
+Host githubsm
+	HostName github.com
+	IdentityFile ~/.ssh/id_rsa_sm
+
+# Ralf Ree Files
+Host githubrr
+	HostName github.com
+	IdentityFile ~/.ssh/id_rsa_rr
+
 Host mors
 	HostName 46.16.233.147
 	user root
