@@ -49,6 +49,11 @@ augroup coffee
 	autocmd BufRead *.coffee	set expandtab
 augroup END
 
+" Markdown should use spaces instead of tabs and a textwidth of 80 characters
+augroup mkd
+	autocmd BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab tw=80
+augroup END
+
 
 " TSkeleton setup
 "autocmd BufNewFile *.h	TSkeletonSetup skeleton.h
