@@ -46,12 +46,12 @@ endif
 
 " CoffeeScript should use spaces instead of tabs
 augroup coffee
-	autocmd BufRead *.coffee	set expandtab
+	autocmd BufNewFile,BufRead *.coffee	set expandtab
 augroup END
 
-" Markdown should use spaces instead of tabs and a textwidth of 80 characters
+" Markdown should use spaces instead of tabs and a textwidth of 72 characters
 augroup mkd
-	autocmd BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab tw=80
+	autocmd BufNewFile,BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab tw=72
 augroup END
 
 
@@ -88,7 +88,7 @@ if &term == "screen"
 endif
 
 " Set solarized colorscheme
-"syntax enable
-"set background=dark
-"set t_Co=16
-"colorscheme solarized
+syntax enable
+let g:solarized_termtrans = 1
+set t_Co=16
+colorscheme solarized
