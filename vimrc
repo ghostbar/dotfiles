@@ -54,6 +54,11 @@ augroup mkd
 	autocmd BufNewFile,BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab tw=72
 augroup END
 
+" TeX should use spaces instead of tabs and a textwidth of 72 characters
+augroup tex
+	autocmd BufNewFile,BufRead *.tex 	set expandtab tw=72
+augroup END
+
 
 " TSkeleton setup
 "autocmd BufNewFile *.h	TSkeletonSetup skeleton.h
