@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = /home/ghostbar/confs/chaos/markdown.vim
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = /home/ghostbar/confs/chaos/vim-coffee-script
