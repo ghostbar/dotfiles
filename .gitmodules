@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = /home/ghostbar/confs/chaos/vim-coffee-script
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = /home/ghostbar/confs/chaos/snipmate.vim/
