@@ -25,3 +25,9 @@
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = /home/ghostbar/confs/chaos/snipmate.vim/
+[submodule "vim/bundle/mustache.vim"]
+	path = vim/bundle/mustache.vim
+	url = git://github.com/juvenn/mustache.vim.git
+[submodule "vim/bundle/vim-handlebars"]
+	path = vim/bundle/vim-handlebars
+	url = /home/ghostbar/confs/chaos/vim-handlebars/
