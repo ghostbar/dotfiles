@@ -13,9 +13,3 @@
 	diff = auto
 	status = auto
 	branch = auto
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 700x550+0+31
-	history-view-vpane-position = 389
-	main-window-view = HistoryView
-	file-view-vpane-position = 538
