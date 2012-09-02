@@ -94,6 +94,6 @@ endif
 
 " Set solarized colorscheme
 syntax enable
-let g:solarized_termtrans = 1
+"let g:solarized_termtrans = 1
 set t_Co=256
-colorscheme solarized
+"colorscheme solarized
