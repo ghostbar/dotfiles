@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-handlebars"]
 	path = vim/bundle/vim-handlebars
 	url = /home/ghostbar/confs/chaos/vim-handlebars/
+[submodule "vim/bundle/vim-brunch"]
+	path = vim/bundle/vim-brunch
+	url = /home/ghostbar/confs/chaos/vim-brunch/
