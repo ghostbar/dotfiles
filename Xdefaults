@@ -10,8 +10,8 @@ URxvt*geometry:         	81x25
 !URxvt*inheritPixmap:    	true
 !URxvt*reverseVideo:		false
 !URxvt*tintColor:        	#dfdfdf
-!URxvt*shading:	        50		!trans, 0=opaque    
-!URxvt*fading:	        30		!term unfocus      
+URxvt*shading:	        50		!trans, 0=opaque    
+URxvt*fading:	        30		!term unfocus      
 !URxvt*font:	     		-lfp-gamow-medium-r-normal-*-*-90-*-*-c-*-iso8859-5
 !URxvt*font:			-*-terminus-*-*-*-*-17-*-*-*-*-*-koi8-*
 !URxvt*font:			xft:Monaco:size=6
@@ -25,8 +25,6 @@ URxvt*scrollBar:		false
 URxvt*saveLines:		5500
 !URxvt*termName:		URxvt-ml
 URxvt*cursorColor:		#d8d8d8
-URxvt*colorBD:		lightyellow
-URxvt*colorUL:		yellow
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
@@ -38,436 +36,294 @@ urxvt*perl-ext-common:	default,matcher
 urxvt*matcher.button:	1
 urxvt*urlLauncher:		/usr/bin/google-chrome
 
-!colors
-!black
-!URxvt*color0:		#676767
-!URxvt*color8:	        #757575
-!red
-!URxvt*color1:	        #EA6868
-!URxvt*color9:	        #FF7272
-!green
-!URxvt*color2:	        #ABCB8D
-!URxvt*color10:	        #AFD78A
-!yellow
-!URxvt*color3:	        #E8AE5B
-!URxvt*color11:	        #FFA75D
-!blue
-!URxvt*color4:	        #71C5F4
-!URxvt*color12:	        #67CDE9
-!magenta
-!URxvt*color5:	        #E2BAF1
-!URxvt*color13:	        #ECAEE9
-!cyan
-!URxvt*color6:	        #21F1EA
-!URxvt*color14:	        #36FFFC
-!white
-!URxvt*color7:	        #F1F1F2
-!URxvt*color15:	        #FFFFFF
+#define t_bg_floor     #FFFEF3
+#define t_bg_dip       #FFF9EE
+#define t_background   #FAF0E6
+#define t_bg_bump      #E7DFD5
+#define t_fg_comment   #8F98A1
+#define t_foreground   #69717A
+#define t_fg_highlight #5B636B
+#define t_fg_ceiling   #00020E
 
-!! Second option
-!urxvt*foreground: #f2f2f2
-!urxvt*background: #101010
-!urxvt*color0: #101010
-!urxvt*color1: #f13a21
-!urxvt*color2: #93f91d
-!urxvt*color3: #ffd00a
-!urxvt*color4: #004f9e
-!urxvt*color5: #ec0048
-!urxvt*color6: #2aa7e7
-!urxvt*color7: #f2f2f2
-!urxvt*color8: #383e5b
-!urxvt*color9: #ff361e
-!urxvt*color10: #ffc005
-!urxvt*color11: #93ff00
-!urxvt*color12: #0071ff
-!urxvt*color13: #ef0051
-!urxvt*color14: #4bb8fd
-!urxvt*color15: #a020f0
-!urxvt*transparent: true
-!urxvt*shading: 25
-!urxvt*fading: 50
-!
+URxvt*background: #FAF0E6
+URxvt*foreground: #69717A
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+URxvt*colorBD: #5B636B
+URxvt*colorIT: #5B636B
+URxvt*colorUL: #5B636B
 
-!URxvt.depth: 								32
-URxvt.transparent: 					false
-URxvt.fading: 							0
-URxvt.loginShell: 					true
-URxvt.lineSpace: 						0
-
-URxvt.allow_bold: 					false
-! URxvt*font: 							xft:Monospace:pixelsize=14
-! URxvt*boldFont: 					xft:Monospace:pixelsize=14
-
-! Dark-background
-!*background:            #002b36
-!*foreground:            #657b83
-! Light background
-!urxvt*background: 					 #fdf6e3
-!*fadeColor: 						#002b36
-!*cursorColor: 					#93a1a1
-!urxvt*pointerColorBackground:#586e75
-!urxvt*pointerColorForeground:#93a1a1
-
-!! black dark/light
-!*color0:                #073642
-!*color8:                #002b36
-
-!! red dark/light
-!*color1:                #dc322f
-!*color9:                #cb4b16
-
-!! green dark/light
-!*color2:                #859900
-!*color10:               #586e75
-
-!! yellow dark/light
-!*color3:                #b58900
-!*color11: 							 #657b83
-
-!! blue dark/light
-!*color4:                #268bd2
-!*color12:               #839496
-
-!! magenta dark/light
-!*color5:                #d33682
-!*color13:               #6c71c4
-
-!! cyan dark/light
-!!*color6:                #2aa198
-!!*color14:               #93a1a1
-
-!! white dark/light
-!!*color7:                #eee8d5
-!!*color16:               #fdf6e3
-
-
-!! Tango
-urxvt*foreground: #f2f2f2
-urxvt*background: #383838
-urxvt*color0: #101010
-urxvt*color1: #f13a21
-urxvt*color2: #93f91d
-urxvt*color3: #ffd00a
-urxvt*color4: #0072e5
-urxvt*color5: #ec0048
-urxvt*color6: #2aa7e7
-urxvt*color7: #f2f2f2
-urxvt*color8: #1d202f
-urxvt*color9: #ff361e
-urxvt*color10: #ffc005
-urxvt*color11: #93ff00
-urxvt*color12: #0071ff
-urxvt*color13: #ef0051
-urxvt*color14: #4bb8fd
-urxvt*color15: #a020f0
-urxvt*shading: 50
-urxvt*fading: 50
-
-#define t_bg_floor     #010000
-#define t_bg_dip       #2B2B28
-#define t_background   #32312E
-#define t_bg_bump      #3F3E3B
-#define t_fg_comment   #7F7F83
-#define t_foreground   #A6A7AA
-#define t_fg_highlight #B6B7BB
-#define t_fg_ceiling   #FEFFFF
-
-URxvt.background: t_background
-URxvt.foreground: t_foreground
-
-URxvt.colorBD: t_fg_highlight
-URxvt.colorIT: t_fg_highlight
-URxvt.colorUL: t_fg_highlight
-
-URxvt.cursorColor: #CE94C6
+URxvt*cursorColor: #B144A8
 
 ! BLK
-URxvt.color0: t_bg_bump
-URxvt.color8: t_fg_comment
+URxvt*color0: #e7dfd5
+URxvt*color8: #8F98A1
 
 ! WHT
-URxvt.color7: t_fg_highlight
-URxvt.color15: t_fg_ceiling
+URxvt*color7: #5B636B
+URxvt*color15: #00020E
 
 ! RED
-URxvt.color1: #B36B65
-URxvt.color9: #EFA29B
+URxvt*color1: #F46864
+URxvt*color9: #B42B33
 
 ! YEL
-URxvt.color3: #8D7E45
-URxvt.color11: #C7B679
+URxvt*color3: #AC9510
+URxvt*color11: #726000
 
 ! GRN
-URxvt.color2: #4F8C61
-URxvt.color10: #86C596
+URxvt*color2: #00AE58
+URxvt*color10: #007525
 
 ! CYN
-URxvt.color6: #0E8E9A
-URxvt.color14: #5EC7D4
+URxvt*color6: #00B0CC
+URxvt*color14: #007793
 
 ! BLU
-URxvt.color4: #6181B8
-URxvt.color12: #9AB9F3
+URxvt*color4: #389BFF
+URxvt*color12: #0066CB
 
 ! MAG
-URxvt.color5: #A46D9D
-URxvt.color13: #DFA4D7
+URxvt*color5: #DC6DD2
+URxvt*color13: #A03398
 
-URxvt.color16: t_bg_floor
-URxvt.color17: t_bg_dip
-URxvt.color18: t_background
-URxvt.color19: t_bg_bump
-URxvt.color20: t_fg_comment
-URxvt.color21: t_foreground
-URxvt.color22: t_fg_highlight
-URxvt.color23: t_fg_ceiling
+URxvt*color16: #FFFEF3
+URxvt*color17: #FFF9EE
+URxvt*color18: #FAF0E6
+URxvt*color19: #e7dfd5
+URxvt*color20: #8F98A1
+URxvt*color21: #69717A
+URxvt*color22: #5B636B
+URxvt*color23: #00020E
 
-URxvt.color24: #DE8FA8
-URxvt.color25: #DE8FA7
-URxvt.color26: #DF8FA5
-URxvt.color27: #DF8FA3
-URxvt.color28: #DF8FA2
-URxvt.color29: #DF8FA0
-URxvt.color30: #DF8F9F
-URxvt.color31: #E0909D
-URxvt.color32: #E0909B
-URxvt.color33: #E0909A
-URxvt.color34: #E09098
-URxvt.color35: #E09097
-URxvt.color36: #E09095
-URxvt.color37: #DF9194
-URxvt.color38: #DF9192
-URxvt.color39: #DF9191
-URxvt.color40: #DF918F
-URxvt.color41: #DE928E
-URxvt.color42: #DE928C
-URxvt.color43: #DE928B
-URxvt.color44: #DD9289
-URxvt.color45: #DD9388
-URxvt.color46: #DC9387
-URxvt.color47: #DC9485
-URxvt.color48: #DB9484
-URxvt.color49: #DB9483
-URxvt.color50: #DA9581
-URxvt.color51: #D99580
-URxvt.color52: #D9967F
-URxvt.color53: #D8967E
-URxvt.color54: #D7977D
-URxvt.color55: #D6977B
-URxvt.color56: #D5987A
-URxvt.color57: #D59879
-URxvt.color58: #D49978
-URxvt.color59: #D39977
-URxvt.color60: #D29A76
-URxvt.color61: #D19A75
-URxvt.color62: #D09B74
-URxvt.color63: #CF9B73
-URxvt.color64: #CE9C73
-URxvt.color65: #CD9C72
-URxvt.color66: #CB9D71
-URxvt.color67: #CA9D70
-URxvt.color68: #C99E6F
-URxvt.color69: #C89E6F
-URxvt.color70: #C79F6E
-URxvt.color71: #C59F6E
-URxvt.color72: #C4A06D
-URxvt.color73: #C3A16D
-URxvt.color74: #C1A16C
-URxvt.color75: #C0A26C
-URxvt.color76: #BFA26B
-URxvt.color77: #BDA36B
-URxvt.color78: #BCA36B
-URxvt.color79: #BAA46B
-URxvt.color80: #B9A46A
-URxvt.color81: #B8A56A
-URxvt.color82: #B6A56A
-URxvt.color83: #B5A66A
-URxvt.color84: #B3A66A
-URxvt.color85: #B1A76A
-URxvt.color86: #B0A86A
-URxvt.color87: #AEA86A
-URxvt.color88: #ADA96B
-URxvt.color89: #ABA96B
-URxvt.color90: #AAAA6B
-URxvt.color91: #A8AA6B
-URxvt.color92: #A6AA6C
-URxvt.color93: #A5AB6C
-URxvt.color94: #A3AB6D
-URxvt.color95: #A1AC6D
-URxvt.color96: #A0AC6E
-URxvt.color97: #9EAD6E
-URxvt.color98: #9CAD6F
-URxvt.color99: #9BAE70
-URxvt.color100: #99AE70
-URxvt.color101: #97AE71
-URxvt.color102: #96AF72
-URxvt.color103: #94AF73
-URxvt.color104: #92B074
-URxvt.color105: #90B075
-URxvt.color106: #8FB076
-URxvt.color107: #8DB176
-URxvt.color108: #8BB178
-URxvt.color109: #89B179
-URxvt.color110: #88B27A
-URxvt.color111: #86B27B
-URxvt.color112: #84B27C
-URxvt.color113: #82B37D
-URxvt.color114: #81B37E
-URxvt.color115: #7FB380
-URxvt.color116: #7DB381
-URxvt.color117: #7CB482
-URxvt.color118: #7AB484
-URxvt.color119: #78B485
-URxvt.color120: #76B486
-URxvt.color121: #75B588
-URxvt.color122: #73B589
-URxvt.color123: #71B58B
-URxvt.color124: #70B58C
-URxvt.color125: #6EB68E
-URxvt.color126: #6CB68F
-URxvt.color127: #6BB691
-URxvt.color128: #69B692
-URxvt.color129: #67B694
-URxvt.color130: #66B695
-URxvt.color131: #64B697
-URxvt.color132: #63B798
-URxvt.color133: #61B79A
-URxvt.color134: #60B79C
-URxvt.color135: #5EB79D
-URxvt.color136: #5DB79F
-URxvt.color137: #5BB7A0
-URxvt.color138: #5AB7A2
-URxvt.color139: #59B7A4
-URxvt.color140: #57B7A5
-URxvt.color141: #56B7A7
-URxvt.color142: #55B7A9
-URxvt.color143: #54B7AA
-URxvt.color144: #53B7AC
-URxvt.color145: #52B7AD
-URxvt.color146: #51B7AF
-URxvt.color147: #50B7B1
-URxvt.color148: #4FB7B2
-URxvt.color149: #4EB7B4
-URxvt.color150: #4EB7B5
-URxvt.color151: #4DB7B7
-URxvt.color152: #4DB7B8
-URxvt.color153: #4CB7BA
-URxvt.color154: #4CB7BC
-URxvt.color155: #4CB7BD
-URxvt.color156: #4CB6BF
-URxvt.color157: #4CB6C0
-URxvt.color158: #4CB6C1
-URxvt.color159: #4CB6C3
-URxvt.color160: #4CB6C4
-URxvt.color161: #4DB6C6
-URxvt.color162: #4DB5C7
-URxvt.color163: #4EB5C8
-URxvt.color164: #4EB5CA
-URxvt.color165: #4FB5CB
-URxvt.color166: #50B5CC
-URxvt.color167: #51B4CE
-URxvt.color168: #52B4CF
-URxvt.color169: #53B4D0
-URxvt.color170: #55B4D1
-URxvt.color171: #56B3D2
-URxvt.color172: #57B3D3
-URxvt.color173: #59B3D4
-URxvt.color174: #5AB2D5
-URxvt.color175: #5CB2D6
-URxvt.color176: #5DB2D7
-URxvt.color177: #5FB1D8
-URxvt.color178: #61B1D9
-URxvt.color179: #63B1DA
-URxvt.color180: #64B0DB
-URxvt.color181: #66B0DB
-URxvt.color182: #68B0DC
-URxvt.color183: #6AAFDD
-URxvt.color184: #6CAFDE
-URxvt.color185: #6EAEDE
-URxvt.color186: #70AEDF
-URxvt.color187: #72AEDF
-URxvt.color188: #74ADE0
-URxvt.color189: #76ADE0
-URxvt.color190: #79ACE1
-URxvt.color191: #7BACE1
-URxvt.color192: #7DABE1
-URxvt.color193: #7FABE1
-URxvt.color194: #81AAE2
-URxvt.color195: #83AAE2
-URxvt.color196: #85A9E2
-URxvt.color197: #87A9E2
-URxvt.color198: #8AA8E2
-URxvt.color199: #8CA8E2
-URxvt.color200: #8EA7E2
-URxvt.color201: #90A7E2
-URxvt.color202: #92A6E2
-URxvt.color203: #94A6E2
-URxvt.color204: #96A5E1
-URxvt.color205: #98A5E1
-URxvt.color206: #9BA4E1
-URxvt.color207: #9DA3E1
-URxvt.color208: #9FA3E0
-URxvt.color209: #A1A2E0
-URxvt.color210: #A3A2DF
-URxvt.color211: #A5A1DF
-URxvt.color212: #A7A1DE
-URxvt.color213: #A9A0DE
-URxvt.color214: #ABA0DD
-URxvt.color215: #AC9FDC
-URxvt.color216: #AE9EDC
-URxvt.color217: #B09EDB
-URxvt.color218: #B29DDA
-URxvt.color219: #B49DD9
-URxvt.color220: #B69CD8
-URxvt.color221: #B79CD8
-URxvt.color222: #B99BD7
-URxvt.color223: #BB9AD6
-URxvt.color224: #BC9AD5
-URxvt.color225: #BE99D4
-URxvt.color226: #C099D3
-URxvt.color227: #C198D1
-URxvt.color228: #C398D0
-URxvt.color229: #C497CF
-URxvt.color230: #C697CE
-URxvt.color231: #C796CD
-URxvt.color232: #C996CB
-URxvt.color233: #CA95CA
-URxvt.color234: #CB95C9
-URxvt.color235: #CD95C8
-URxvt.color236: #CE94C6
-URxvt.color237: #CF94C5
-URxvt.color238: #D093C3
-URxvt.color239: #D193C2
-URxvt.color240: #D293C1
-URxvt.color241: #D392BF
-URxvt.color242: #D492BE
-URxvt.color243: #D592BC
-URxvt.color244: #D691BB
-URxvt.color245: #D791B9
-URxvt.color246: #D891B8
-URxvt.color247: #D991B6
-URxvt.color248: #D990B5
-URxvt.color249: #DA90B3
-URxvt.color250: #DB90B2
-URxvt.color251: #DB90B0
-URxvt.color252: #DC90AE
-URxvt.color253: #DD90AD
-URxvt.color254: #DD90AB
-URxvt.color255: #DE8FAA
+URxvt*color24: #CA3073
+URxvt*color25: #CA3071
+URxvt*color26: #CA306E
+URxvt*color27: #CB306B
+URxvt*color28: #CB3068
+URxvt*color29: #CB3165
+URxvt*color30: #CB3163
+URxvt*color31: #CB3260
+URxvt*color32: #CB325D
+URxvt*color33: #CB335B
+URxvt*color34: #CB3458
+URxvt*color35: #CA3555
+URxvt*color36: #CA3553
+URxvt*color37: #CA3650
+URxvt*color38: #C9374D
+URxvt*color39: #C9394B
+URxvt*color40: #C83A48
+URxvt*color41: #C73B45
+URxvt*color42: #C73C43
+URxvt*color43: #C63D40
+URxvt*color44: #C53F3E
+URxvt*color45: #C4403B
+URxvt*color46: #C34138
+URxvt*color47: #C24336
+URxvt*color48: #C14433
+URxvt*color49: #C04631
+URxvt*color50: #BF472E
+URxvt*color51: #BE482C
+URxvt*color52: #BC4A29
+URxvt*color53: #BB4B26
+URxvt*color54: #BA4D24
+URxvt*color55: #B84E21
+URxvt*color56: #B7501E
+URxvt*color57: #B5511B
+URxvt*color58: #B45218
+URxvt*color59: #B25415
+URxvt*color60: #B05512
+URxvt*color61: #AF560E
+URxvt*color62: #AD580A
+URxvt*color63: #AB5905
+URxvt*color64: #A95A01
+URxvt*color65: #A75C00
+URxvt*color66: #A55D00
+URxvt*color67: #A35E00
+URxvt*color68: #A26000
+URxvt*color69: #9F6100
+URxvt*color70: #9D6200
+URxvt*color71: #9B6300
+URxvt*color72: #996400
+URxvt*color73: #976500
+URxvt*color74: #956700
+URxvt*color75: #936800
+URxvt*color76: #906900
+URxvt*color77: #8E6A00
+URxvt*color78: #8C6B00
+URxvt*color79: #896C00
+URxvt*color80: #876D00
+URxvt*color81: #856E00
+URxvt*color82: #826F00
+URxvt*color83: #807000
+URxvt*color84: #7D7100
+URxvt*color85: #7A7200
+URxvt*color86: #787200
+URxvt*color87: #757300
+URxvt*color88: #737400
+URxvt*color89: #707500
+URxvt*color90: #6D7600
+URxvt*color91: #6A7600
+URxvt*color92: #687700
+URxvt*color93: #657800
+URxvt*color94: #627900
+URxvt*color95: #5F7900
+URxvt*color96: #5C7A00
+URxvt*color97: #597B00
+URxvt*color98: #557B00
+URxvt*color99: #527C00
+URxvt*color100: #4F7C00
+URxvt*color101: #4B7D00
+URxvt*color102: #487E00
+URxvt*color103: #447E00
+URxvt*color104: #407F00
+URxvt*color105: #3C7F00
+URxvt*color106: #388000
+URxvt*color107: #338004
+URxvt*color108: #2E8109
+URxvt*color109: #29810F
+URxvt*color110: #238113
+URxvt*color111: #1C8217
+URxvt*color112: #12821A
+URxvt*color113: #03831E
+URxvt*color114: #008321
+URxvt*color115: #008324
+URxvt*color116: #008428
+URxvt*color117: #00842B
+URxvt*color118: #00842E
+URxvt*color119: #008531
+URxvt*color120: #008534
+URxvt*color121: #008537
+URxvt*color122: #00853A
+URxvt*color123: #00863C
+URxvt*color124: #00863F
+URxvt*color125: #008642
+URxvt*color126: #008645
+URxvt*color127: #008648
+URxvt*color128: #00874B
+URxvt*color129: #00874E
+URxvt*color130: #008751
+URxvt*color131: #008754
+URxvt*color132: #008757
+URxvt*color133: #00875A
+URxvt*color134: #00875D
+URxvt*color135: #008860
+URxvt*color136: #008862
+URxvt*color137: #008865
+URxvt*color138: #008868
+URxvt*color139: #00886B
+URxvt*color140: #00886E
+URxvt*color141: #008871
+URxvt*color142: #008874
+URxvt*color143: #008877
+URxvt*color144: #00887A
+URxvt*color145: #00887D
+URxvt*color146: #008880
+URxvt*color147: #008882
+URxvt*color148: #008885
+URxvt*color149: #008888
+URxvt*color150: #00888B
+URxvt*color151: #00888E
+URxvt*color152: #008891
+URxvt*color153: #008893
+URxvt*color154: #008896
+URxvt*color155: #008899
+URxvt*color156: #00889B
+URxvt*color157: #00879E
+URxvt*color158: #0087A1
+URxvt*color159: #0087A3
+URxvt*color160: #0087A6
+URxvt*color161: #0087A8
+URxvt*color162: #0087AB
+URxvt*color163: #0086AD
+URxvt*color164: #0086B0
+URxvt*color165: #0086B2
+URxvt*color166: #0086B4
+URxvt*color167: #0085B6
+URxvt*color168: #0085B9
+URxvt*color169: #0085BB
+URxvt*color170: #0085BD
+URxvt*color171: #0084BF
+URxvt*color172: #0084C1
+URxvt*color173: #0084C3
+URxvt*color174: #0083C5
+URxvt*color175: #0083C6
+URxvt*color176: #0082C8
+URxvt*color177: #0082CA
+URxvt*color178: #0082CB
+URxvt*color179: #0081CD
+URxvt*color180: #0081CE
+URxvt*color181: #0080D0
+URxvt*color182: #0080D1
+URxvt*color183: #007FD2
+URxvt*color184: #007ED3
+URxvt*color185: #007ED5
+URxvt*color186: #007DD6
+URxvt*color187: #007DD7
+URxvt*color188: #007CD7
+URxvt*color189: #007BD8
+URxvt*color190: #007BD9
+URxvt*color191: #007ADA
+URxvt*color192: #0079DA
+URxvt*color193: #0078DB
+URxvt*color194: #0078DB
+URxvt*color195: #0077DB
+URxvt*color196: #0076DB
+URxvt*color197: #0075DC
+URxvt*color198: #0074DC
+URxvt*color199: #0073DC
+URxvt*color200: #0072DC
+URxvt*color201: #0072DB
+URxvt*color202: #1971DB
+URxvt*color203: #2770DB
+URxvt*color204: #316FDA
+URxvt*color205: #3A6EDA
+URxvt*color206: #416CD9
+URxvt*color207: #486BD9
+URxvt*color208: #4E6AD8
+URxvt*color209: #5469D7
+URxvt*color210: #5A68D6
+URxvt*color211: #5F67D5
+URxvt*color212: #6466D4
+URxvt*color213: #6864D3
+URxvt*color214: #6D63D2
+URxvt*color215: #7162D1
+URxvt*color216: #7560CF
+URxvt*color217: #795FCE
+URxvt*color218: #7D5ECD
+URxvt*color219: #815CCB
+URxvt*color220: #855BC9
+URxvt*color221: #885AC8
+URxvt*color222: #8B58C6
+URxvt*color223: #8F57C4
+URxvt*color224: #9255C3
+URxvt*color225: #9554C1
+URxvt*color226: #9853BF
+URxvt*color227: #9B51BD
+URxvt*color228: #9E50BB
+URxvt*color229: #A04EB8
+URxvt*color230: #A34DB6
+URxvt*color231: #A54BB4
+URxvt*color232: #A84AB2
+URxvt*color233: #AA48B0
+URxvt*color234: #AC47AD
+URxvt*color235: #AF45AB
+URxvt*color236: #B144A8
+URxvt*color237: #B342A6
+URxvt*color238: #B541A4
+URxvt*color239: #B640A1
+URxvt*color240: #B83E9E
+URxvt*color241: #BA3D9C
+URxvt*color242: #BB3C99
+URxvt*color243: #BD3A97
+URxvt*color244: #BE3994
+URxvt*color245: #C03891
+URxvt*color246: #C1378F
+URxvt*color247: #C2368C
+URxvt*color248: #C33589
+URxvt*color249: #C43487
+URxvt*color250: #C53384
+URxvt*color251: #C63381
+URxvt*color252: #C7327E
+URxvt*color253: #C8317C
+URxvt*color254: #C83179
+URxvt*color255: #C93176
