@@ -80,3 +80,12 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/games:/home/ghostbar/bin"
 
 export PATH="$PATH:/home/ghostbar/Code/www/drupal/drush"
+
+# {{{
+# Node Completion - Auto-generated, do not touch.
+shopt -s progcomp
+for f in $(command ls ~/.node-completion); do
+  f="$HOME/.node-completion/$f"
+  test -f "$f" && . "$f"
+done
+# }}}
