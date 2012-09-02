@@ -16,9 +16,6 @@
 [submodule "vim/bundle/vim-makegreen"]
 	path = vim/bundle/vim-makegreen
 	url = git://github.com/reinh/vim-makegreen.git
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = /home/ghostbar/confs/chaos/markdown.vim
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = /home/ghostbar/confs/chaos/vim-coffee-script
@@ -34,6 +31,3 @@
 [submodule "vim/bundle/vim-brunch"]
 	path = vim/bundle/vim-brunch
 	url = /home/ghostbar/confs/chaos/vim-brunch/
-[submodule "vim/bundle/vim-github-markdown"]
-	path = vim/bundle/vim-github-markdown
-	url = git://github.com/simoleone/vim-github-markdown.git
