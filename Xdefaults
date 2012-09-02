@@ -27,9 +27,6 @@ URxvt*saveLines:		5500
 URxvt*cursorColor:		#d8d8d8
 URxvt*colorBD:		lightyellow
 URxvt*colorUL:		yellow
-
-!https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working
-!Getting Home and End keys to work
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
@@ -91,22 +88,22 @@ urxvt*urlLauncher:		/usr/bin/google-chrome
 !urxvt*fading: 50
 !
 
-!#define S_base03        #002b36
-!#define S_base02        #073642
-!#define S_base01        #586e75
-!#define S_base00        #657b83
-!#define S_base0         #839496
-!#define S_base1         #93a1a1
-!#define S_base2         #eee8d5
-!#define S_base3         #fdf6e3
-!#define S_yellow        #b58900
-!#define S_orange        #cb4b16
-!#define S_red           #dc322f
-!#define S_magenta       #d33682
-!#define S_violet        #6c71c4
-!#define S_blue          #268bd2
-!#define S_cyan          #2aa198
-!#define S_green         #859900
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
 !URxvt.depth: 								32
 URxvt.transparent: 					false
@@ -162,26 +159,26 @@ URxvt.allow_bold: 					false
 
 
 !! Tango
-!urxvt*foreground: #f2f2f2
-!urxvt*background: #383838
-!urxvt*color0: #101010
-!urxvt*color1: #f13a21
-!urxvt*color2: #93f91d
-!urxvt*color3: #ffd00a
-!urxvt*color4: #0072e5
-!urxvt*color5: #ec0048
-!urxvt*color6: #2aa7e7
-!urxvt*color7: #f2f2f2
-!urxvt*color8: #1d202f
-!urxvt*color9: #ff361e
-!urxvt*color10: #ffc005
-!urxvt*color11: #93ff00
-!urxvt*color12: #0071ff
-!urxvt*color13: #ef0051
-!urxvt*color14: #4bb8fd
-!urxvt*color15: #a020f0
-!urxvt*shading: 50
-!urxvt*fading: 50
+urxvt*foreground: #f2f2f2
+urxvt*background: #383838
+urxvt*color0: #101010
+urxvt*color1: #f13a21
+urxvt*color2: #93f91d
+urxvt*color3: #ffd00a
+urxvt*color4: #0072e5
+urxvt*color5: #ec0048
+urxvt*color6: #2aa7e7
+urxvt*color7: #f2f2f2
+urxvt*color8: #1d202f
+urxvt*color9: #ff361e
+urxvt*color10: #ffc005
+urxvt*color11: #93ff00
+urxvt*color12: #0071ff
+urxvt*color13: #ef0051
+urxvt*color14: #4bb8fd
+urxvt*color15: #a020f0
+urxvt*shading: 50
+urxvt*fading: 50
 
 #define t_bg_floor     #010000
 #define t_bg_dip       #2B2B28
