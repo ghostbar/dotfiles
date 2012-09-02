@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-brunch"]
 	path = vim/bundle/vim-brunch
 	url = /home/ghostbar/confs/chaos/vim-brunch/
+[submodule "vim/bundle/vim-github-markdown"]
+	path = vim/bundle/vim-github-markdown
+	url = git://github.com/simoleone/vim-github-markdown.git
