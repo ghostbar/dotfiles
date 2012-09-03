@@ -1,1 +1,0 @@
-pelox	ghostbar@irc.freenode.net	IRC	d20003772123ffcab0aaacbd2625e366e54caaa3	smp
