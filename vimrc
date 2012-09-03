@@ -51,12 +51,12 @@ augroup END
 
 " Markdown should use spaces instead of tabs and a textwidth of 80 characters
 augroup mkd
-	autocmd BufNewFile,BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab tw=80
+	autocmd BufNewFile,BufRead *.mkd,*.md,*.mkdn,*.markdown		set expandtab
 augroup END
 
 " TeX should use spaces instead of tabs and a textwidth of 80 characters
 augroup tex
-	autocmd BufNewFile,BufRead *.tex 	set expandtab tw=80
+	autocmd BufNewFile,BufRead *.tex 	set expandtab
 augroup END
 
 
