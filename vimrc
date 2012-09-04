@@ -97,3 +97,11 @@ syntax enable
 "let g:solarized_termtrans = 1
 set t_Co=256
 "colorscheme solarized
+
+" CtrlP configs
+"let g:ctrlp_custom_ignore = {
+"	\ 'dir': '\v[\/](\.git|\.hg|\.svn)$',
+"	\ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$',
+"	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS'
+"}
+set wildignore+=*.so,*.swp,*.zip
