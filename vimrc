@@ -27,7 +27,7 @@ set smartcase      " Do smart case matching
 
 
 " Use 2-spaces instead of tabs
-" set expandtab
+set expandtab
 set tabstop=2
 set shiftwidth=2
 
@@ -47,6 +47,9 @@ endif
 " CoffeeScript should use spaces instead of tabs
 augroup coffee
 	autocmd BufNewFile,BufRead *.coffee	set expandtab
+augroup END
+augroup js
+	autocmd BufNewFile,BufRead *.js,*.javascript set expandtab
 augroup END
 
 " Markdown should use spaces instead of tabs and a textwidth of 80 characters
@@ -102,6 +105,6 @@ set t_Co=256
 "let g:ctrlp_custom_ignore = {
 "	\ 'dir': '\v[\/](\.git|\.hg|\.svn)$',
 "	\ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$',
-"	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS'
+"	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 "}
 set wildignore+=*.so,*.swp,*.zip
