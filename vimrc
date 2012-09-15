@@ -102,9 +102,12 @@ set t_Co=256
 "colorscheme solarized
 
 " CtrlP configs
-"let g:ctrlp_custom_ignore = {
-"	\ 'dir': '\v[\/](\.git|\.hg|\.svn)$',
-"	\ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$',
-"	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-"}
-set wildignore+=*.so,*.swp,*.zip
+" ctrlp will open the new file in the same window, overriding the default
+" behavior of opening a vertical split
+let g:ctrlp_open_new_file = 'r'
+
+" What should CtrlP ignore?
+" files that should not be editable like .so, swp, .zip, .exe and .dll
+" /node_modules/ dirs should be avoided, cause they're not supposed to be
+" edited via vim, but via npm.
+set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
