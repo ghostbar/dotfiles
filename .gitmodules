@@ -31,9 +31,6 @@
 [submodule "vim/bundle/vim-brunch"]
 	path = vim/bundle/vim-brunch
 	url = /home/ghostbar/confs/chaos/vim-brunch/
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = /home/ghostbar/confs/chaos/vim-markdown/
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
