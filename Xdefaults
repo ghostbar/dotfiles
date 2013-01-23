@@ -18,8 +18,8 @@ URxvt*geometry:         	81x25
 !URxvt*font: 		xft:Inconsolata:size=10
 !URxvt*font:  		xft:matto:antialias=true:size=8
 !URxvt*font:			xft:Bitstream Vera Sans mono:size=9
-URxvt*font:			xft:Terminus:size=9
-URxvt*boldFont: xft:terminus:bold:size=9
+!URxvt*font:			xft:Terminus:size=9
+URxvt*font:       xft:PragmataPro:size=8,xft:PowerlineSymbols:pixelsize=8
 URxvt*scrollBar:		false
 !URxvt*scrollBar_floating:	true
 !URxvt*scrollBar_right:		false
