@@ -121,3 +121,6 @@ set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
 python from powerline.bindings.vim import source_plugin; source_plugin()
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
