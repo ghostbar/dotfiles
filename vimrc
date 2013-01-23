@@ -116,3 +116,8 @@ let g:ctrlp_open_new_file = 'r'
 " /node_modules/ dirs should be avoided, cause they're not supposed to be
 " edited via vim, but via npm.
 set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
+
+" Enabling Powerline for VIM
+python from powerline.bindings.vim import source_plugin; source_plugin()
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
