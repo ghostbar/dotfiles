@@ -30,6 +30,7 @@ set smartcase      " Do smart case matching
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 
 " When I'm pasting activate this mode so autoindent doesn't smash all.
 set pastetoggle=<F2>
@@ -50,6 +51,10 @@ augroup coffee
 augroup END
 augroup js
 	autocmd BufNewFile,BufRead *.js,*.javascript set expandtab
+augroup END
+
+augroup py
+  autocmd BufNewFile,BufRead *.py set expandtab sw=4 ts=4 sts=4
 augroup END
 
 " Markdown should use spaces instead of tabs and a textwidth of 80 characters
