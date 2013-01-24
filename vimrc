@@ -102,9 +102,9 @@ endif
 
 " Set solarized colorscheme
 syntax enable
-"let g:solarized_termtrans = 1
+let g:solarized_termtrans = 1
 set t_Co=256
-"colorscheme solarized
+colorscheme solarized
 
 " CtrlP configs
 " ctrlp will open the new file in the same window, overriding the default
@@ -120,7 +120,7 @@ set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
 " Enabling Powerline for VIM
 python from powerline.bindings.vim import source_plugin; source_plugin()
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
