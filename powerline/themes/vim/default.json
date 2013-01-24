@@ -47,6 +47,13 @@
 		],
 		"right": [
 			{
+				"name": "file_format",
+				"draw_divider": false,
+				"exclude_modes": ["nc"],
+				"priority": 50,
+				"divider_highlight_group": "background:divider"
+			},
+			{
 				"name": "file_encoding",
 				"exclude_modes": ["nc"],
 				"priority": 50,
@@ -61,27 +68,26 @@
 			{
 				"name": "line_percent",
 				"args": { "gradient": true },
-				"priority": -1,
+				"priority": 30,
 				"after": "",
-				"rjust": 1
+				"rjust": 4
 			},
 			{
 				"type": "string",
 				"contents": " ",
-				"highlight_group": ["line_current_symbol", "line_current", "col_current"]
+				"highlight_group": ["line_current_symbol", "line_current"]
 			},
 			{
 				"name": "line_current",
 				"draw_divider": false,
-        "priority": 30,
-				"rjust": 4
+				"rjust": 3
 			},
 			{
 				"name": "col_current",
 				"draw_divider": false,
+				"priority": 30,
 				"before": ":",
-        "priority": 30,
-				"ljust": 4
+				"ljust": 3
 			}
 		]
 	}

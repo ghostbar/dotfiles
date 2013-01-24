@@ -9,11 +9,6 @@
 				"divider_highlight_group": "background:divider"
 			},
 			{
-				"name": "network_load",
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
-			},
-			{
 				"name": "date"
 			},
 			{
