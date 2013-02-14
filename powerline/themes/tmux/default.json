@@ -3,12 +3,6 @@
 	"segments": {
 		"right": [
 			{
-				"name": "external_ip",
-				"before": "ⓦ  ",
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
-			},
-			{
 				"name": "date"
 			},
 			{
