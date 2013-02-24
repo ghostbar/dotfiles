@@ -47,8 +47,8 @@ esac
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 # enable color support of ls and also add handy aliases
@@ -72,8 +72,8 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # defaults variables
-if [ -f ~/.bash_vars ]; then
-    . ~/.bash_vars
+if [ -f ~/.shenv ]; then
+    . ~/.shenv
 fi
 
 # enabling ~/bin for command path search

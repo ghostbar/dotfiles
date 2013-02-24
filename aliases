@@ -1,0 +1,15 @@
+# For du
+alias howmuch='du -h --max-depth=1 --exclude="./.*"'
+
+# Alias for nautilus using the --browser view
+#alias nautilus='nautilus --browser'
+
+# Alias for tagging with svn-buildpackage
+alias pp-tag='svn-buildpackage --svn-tag-only'
+
+# Task alias!!!
+alias ts='task'
+
+alias htop='TERM=screen htop'
+
+alias tmux='TERM=xterm-256color tmux'

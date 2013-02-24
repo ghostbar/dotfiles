@@ -58,14 +58,14 @@ zstyle ':completion:*' completer \
 
 #########
 # Load aliases
-if [ -e "$HOME/.bash_aliases" ]; then
-  source "$HOME/.bash_aliases"
+if [ -e "$HOME/.aliases" ]; then
+  source "$HOME/.aliases"
 fi
 
 #########
 # Load vars
-if [ -e "$HOME/.bash_vars" ]; then
-  source "$HOME/.bash_vars"
+if [ -e "$HOME/.shenv" ]; then
+  source "$HOME/.shenv"
 fi
 
 #########
