@@ -19,12 +19,17 @@ Basically there are lots of configuration dotfiles for:
 + Ferm (front-end for iptables/ip6tables)
 
 ## How are presented:
-There are no *.something* but normal files that I use by simply making symbolic links to my ${HOME}.
+There are no *.something* but normal files that I use by simply making symbolic links to your `$HOME` (this can be done using the `Makefile`).
 
 ## How can be used
 You can check some configs, there are not a lot of comments but sometimes I made them. I'm very happy with my Vim configuration (with snipmate and stuff) and you could like how it works, probably.
 
 Any question will be answered better by using manpages that by asking me.
+
+If you want to use them as they are then the best method is to use the `Makefile` targets, depending on what you want. So, if you want `bash` and `vim` you should use:
+
+  % make bash
+  % make vim
 
 ## License and Copyright
 These files are released under the MIT-license. Please retain the copyright on the files.
