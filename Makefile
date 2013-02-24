@@ -1,4 +1,4 @@
-all: bash zsh tmux powerline git
+all: bash zsh tmux powerline git vim
 
 bash:
 	ln -s $(CURDIR)/bashrc $(HOME)/.bashrc
@@ -19,3 +19,7 @@ git:
 
 tmux:
 	ln -s $(CURDIR)/tmux.conf $(HOME)/.tmux.conf
+
+vim:
+	ln -s $(CURDIR)/vimrc $(HOME)/.vimrc
+	ln -s $(CURDIR)/vim $(HOME)/.vim
