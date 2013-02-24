@@ -2,10 +2,12 @@ all: bash zsh tmux powerline git vim
 
 bash:
 	ln -s $(CURDIR)/bashrc $(HOME)/.bashrc
-	ln -s $(CURDIR)/bash_profile $(HOME)/.bash_profile
-	ln -s $(CURDIR)/bash_vars $(HOME)/.bash_vars
+	ln -s $(CURDIR)/profile $(HOME)/.profile
+	ln -s $(CURDIR)/bash_vars $(HOME)/.shenv
+	ln -s $(CURDIR)/logout $(HOME)/.logout
+	ln -s $(CURDIR)/aliases $(HOME)/.aliases
 
-zsh:
+zsh: bash
 	ln -s $(CURDIR)/zshrc $(HOME)/.zshrc
 	ln -s $(CURDIR)/zsh $(HOME)/.zsh
 
