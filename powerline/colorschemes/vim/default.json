@@ -46,12 +46,12 @@
 		"gray9": 250,
 		"gray10": 252,
 
-		"gradient1": 190,
-		"gradient2": 184,
-		"gradient3": 178,
-		"gradient4": 172,
-		"gradient5": 166,
-		"gradient6": 160
+		"gradient1": [190, "8ae71c"],
+		"gradient2": [184, "c2e821"],
+		"gradient3": [178, "e9d926"],
+		"gradient4": [172, "eaa72b"],
+		"gradient5": [166, "eb7830"],
+		"gradient6": [160, "ec4b35"]
 	},
 	"groups": {
 		"background": { "fg": "white", "bg": "gray2" },
@@ -64,6 +64,7 @@
 		"branch:divider": { "fg": "gray7", "bg": "gray4" },
 		"file_directory": { "fg": "gray9", "bg": "gray4" },
 		"file_name": { "fg": "white", "bg": "gray4", "attr": ["bold"] },
+		"file_size": { "fg": "gray8", "bg": "gray2" },
 		"file_name_no_file": { "fg": "gray9", "bg": "gray4", "attr": ["bold"] },
 		"file_name_empty": { "fg": "gray9", "bg": "gray4" },
 		"file_format": { "fg": "gray8", "bg": "gray2" },
@@ -81,7 +82,8 @@
 		"line_percent_gradient6": { "fg": "gradient6", "bg": "gray4" },
 		"line_current": { "fg": "gray1", "bg": "gray10", "attr": ["bold"] },
 		"line_current_symbol": { "fg": "gray1", "bg": "gray10" },
-		"col_current": { "fg": "gray6", "bg": "gray10" }
+		"col_current": { "fg": "gray6", "bg": "gray10" },
+		"modified_buffers": { "fg": "brightyellow", "bg": "gray2" }
 	},
 	"mode_translations": {
 		"nc": {
