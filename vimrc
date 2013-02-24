@@ -118,8 +118,10 @@ let g:ctrlp_open_new_file = 'r'
 set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
 
 " Enabling Powerline for VIM
-python from powerline.bindings.vim import source_plugin; source_plugin()
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim
 set laststatus=2
+set fillchars+=stl:\ ,stlnc:\
+set encoding=utf-8
 "let g:Powerline_symbols = 'fancy'
 
 " Tagbar
