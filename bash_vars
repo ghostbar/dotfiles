@@ -1,4 +1,4 @@
-export EDITOR=vi
+export EDITOR=vim
 export DEBEMAIL=ghostbar@debian.org
 export BROWSER=google-chrome
 export SIDCOW=/home/ghostbar/var/cache/pbuilder/unstable.cow
