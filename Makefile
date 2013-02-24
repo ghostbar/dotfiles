@@ -13,6 +13,9 @@ powerline:
 	mkdir $(HOME)/.config
 	ln -s $(CURDIR)/powerline $(HOME)/.config/powerline
 
-dummy:
-	echo $(HOME)
-	echo $(CURDIR)
+git:
+	ln -s $(CURDIR)/gitignore $(HOME)/.gitignore
+	ln -s $(CURDIR)/gitconfig $(HOME)/.gitconfig
+
+tmux:
+	ln -s $(CURDIR)/tmux.conf $(HOME)/.tmux.conf
