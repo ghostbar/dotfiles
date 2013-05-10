@@ -33,6 +33,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
+" Insert tabs on the start of a line according to shiftwidth, not tabstop
+set smarttab
+
 " When I'm pasting activate this mode so autoindent doesn't smash all.
 set pastetoggle=<F2>
 
