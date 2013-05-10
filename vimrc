@@ -39,11 +39,6 @@ set smarttab
 " When I'm pasting activate this mode so autoindent doesn't smash all.
 set pastetoggle=<F2>
 
-" Adding support for markdown syntax
-"augroup mkd
-"  autocmd BufRead *.mkd,*.md,*.markdown  set ts=2 sw=2 ai formatoptions=tcroqn2 comments=n:>
-"augroup END
-
 " Load identation rules according to filetype
 if has("autocmd")
   filetype plugin indent on
@@ -70,14 +65,6 @@ augroup END
 augroup tex
 	autocmd BufNewFile,BufRead *.tex 	set expandtab
 augroup END
-
-
-" TSkeleton setup
-"autocmd BufNewFile *.h	TSkeletonSetup skeleton.h
-"autocmd BufNewFile *.c	TSkeletonSetup skeleton.c
-"autocmd BufNewFile *.cc	TSkeletonSetup skeleton.cc
-"autocmd BufNewFile *.pl	TSkeletonSetup skeleton.pl
-"autocmd BufNewFile *.pm	TSkeletonSetup skeleton.pm
 
 filetype plugin on
 
