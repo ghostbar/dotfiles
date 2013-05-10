@@ -94,7 +94,7 @@ map <F3> :NERDTreeToggle<CR>
 vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
 " F7 for put
 "map <F7> mz:-1r !xclip -o -sel clip<CR>`z
-nmap <F7> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+map <F7> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 
 " Making vim work as should while using tmux with $TERM="screen"
 if &term == "screen"
