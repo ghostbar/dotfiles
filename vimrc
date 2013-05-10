@@ -75,6 +75,16 @@ set autowrite      " Automatically save before commands like :next and :make
 set hidden         " Hide buffers when they are abandoned
 set mouse=a        " Enable mouse usage (all modes)
 
+" No backup! No `.swp` files!
+set nobackup
+set noswapfile
+
+" Highlight whitespaces: set out tab characters, trailing whitespace and
+" invisible spaces visually; and additionally use the `#` sign at the end of
+" lines to mark lines that extend off-screen
+" set list
+" set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
 " Mapping NERD_Tree toggle command to F3
 map <F3> :NERDTreeToggle<CR>
 
