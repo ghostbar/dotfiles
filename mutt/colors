@@ -4,7 +4,7 @@
 # --Dmitry Borodaenko <angdraug@mail.ru>
 
 # override defaults, make transparency work
-color normal    white default
+#color normal    white default
 color attachment green default #
 color hdrdefault cyan default
 color indicator black cyan
@@ -21,15 +21,15 @@ color	quoted1 	cyan	default
 color	quoted2 	yellow	default
 color	quoted3		red	default
 
-color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # email
-color body brightblue default "(http|ftp)://[\-\.\,/+=&%~_:?\#a-zA-Z0-9]+" # URL
-color body brightgreen default "(^| |[-.[:alnum:]]+:+)~?\(/[-_.'[:alnum:]]+\)+/?" # Unix file path
-color body brightgreen	default "(^| +)[[:alpha:]]:[-_.[:alnum:]\]+" # DOS file path
-color body brightmagenta default "(^|[ '\"]+)\\$[[:alpha:]][-_[:alpha:]]+" # variable
-color body brightred default "(^| )[*_]+[-&[:alnum:]]+[*_]( |$)" # bold/underline
-color body yellow default "(^| )[;:8ö][-^o]?[)>(|/\\]+" # smiley
-color body red default "[!?]{3,}" # exclamation
-color body green default "^ *[-+*o] +" # list item
+#color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # email
+#color body brightblue default "(http|ftp)://[\-\.\,/+=&%~_:?\#a-zA-Z0-9]+" # URL
+#color body brightgreen default "(^| |[-.[:alnum:]]+:+)~?\(/[-_.'[:alnum:]]+\)+/?" # Unix file path
+#color body brightgreen	default "(^| +)[[:alpha:]]:[-_.[:alnum:]\]+" # DOS file path
+#color body brightmagenta default "(^|[ '\"]+)\\$[[:alpha:]][-_[:alpha:]]+" # variable
+#color body brightred default "(^| )[*_]+[-&[:alnum:]]+[*_]( |$)" # bold/underline
+#color body yellow default "(^| )[;:8ö][-^o]?[)>(|/\\]+" # smiley
+#color body red default "[!?]{3,}" # exclamation
+#color body green default "^ *[-+*o] +" # list item
 
 # date formats
 color body cyan default "[0-9]{1,2}:[0-9]{2}(:[0-9]{2})?( ?(AM|PM|am|pm))?( +[+-][0-9]{4})?"
@@ -84,8 +84,8 @@ color index red default '~D' # deleted
 #color index green        default  "~h 'References: +<.+> +<.+> +<.+> +<.+> +<.+> +<.+>'"
 
 # spam
-color index magenta default "\(Resent-\)?Message-Id: <>"
-color index magenta default "\(Resent-\)?Message-Id: '<.* .*>'"
-color index magenta default "\(Resent-\)?Message-Id: localhost"
-color index magenta default "! \(Resent-\)?Message-Id: @"
-color index magenta default '~C Undisclosed.*Recipients'
+#color index magenta default "\(Resent-\)?Message-Id: <>"
+#color index magenta default "\(Resent-\)?Message-Id: '<.* .*>'"
+#color index magenta default "\(Resent-\)?Message-Id: localhost"
+#color index magenta default "! \(Resent-\)?Message-Id: @"
+#color index magenta default '~C Undisclosed.*Recipients'
