@@ -119,7 +119,7 @@ let g:ctrlp_open_new_file = 'r'
 set wildignore+=*.so,*.swp,*.zip,*/node_modules/*,*.exe,*.dll
 
 " Enabling Powerline for VIM
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8

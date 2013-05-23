@@ -40,11 +40,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 #
 # Powerline
-. /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 #########
 # Perlbrew
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 #########
 # Force rehash if nothing was auto-completed
@@ -84,4 +84,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 unsetopt correct_all
 
 ## Loading PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/share/python:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
