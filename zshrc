@@ -32,7 +32,8 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cake command-not-found coffee cpanm debian extract gem git-extras git-flow git-hubflow github heroku history-substring-search npm perl rails3 redis-cli ruby rsync rvm pip python vagrant virtualenvwrapper zsh-syntax-highlighting)
+# plugins=(git cake command-not-found coffee cpanm debian extract gem git-extras git-flow git-hubflow github heroku history-substring-search npm perl rails3 redis-cli ruby rsync rvm pip python vagrant virtualenvwrapper zsh-syntax-highlighting)
+plugin=(git command-not-found coffee extract git-extras git-flow github heroku history-substring-search npm redis-cli vagrant zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,4 +85,9 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 unsetopt correct_all
 
 ## Loading PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/share/python:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
