@@ -127,3 +127,6 @@ set encoding=utf-8
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" Just for clipboard support on OSX
+set clipboard=unnamed
