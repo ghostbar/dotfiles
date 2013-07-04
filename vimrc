@@ -128,5 +128,8 @@ set encoding=utf-8
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" Javascript libraries
+let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
+
 " Just for clipboard support on OSX
 set clipboard=unnamed
