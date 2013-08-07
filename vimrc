@@ -131,3 +131,8 @@ nmap <F8> :TagbarToggle<CR>
 " Javascript libraries
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 
+" background for vim-indent-guides
+set background=light
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=white   ctermbg=111
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=yellow  ctermbg=153
