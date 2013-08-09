@@ -76,8 +76,8 @@ set hidden         " Hide buffers when they are abandoned
 set mouse=a        " Enable mouse usage (all modes)
 
 " No backup! No `.swp` files!
-set nobackup
-set noswapfile
+"set nobackup
+"set noswapfile
 
 " Highlight whitespaces: set out tab characters, trailing whitespace and
 " invisible spaces visually; and additionally use the `#` sign at the end of
