@@ -40,12 +40,6 @@
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
-[submodule "vim/bundle/javascript-libraries-syntax"]
-	path = vim/bundle/javascript-libraries-syntax
-	url = git://github.com/othree/javascript-libraries-syntax.vim.git
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
 [submodule "vim/bundle/vim-indent-guides"]
 	path = vim/bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
