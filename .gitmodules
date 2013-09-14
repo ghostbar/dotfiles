@@ -31,12 +31,6 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
-[submodule "vim/bundle/webapi-vim"]
-	path = vim/bundle/webapi-vim
-	url = git://github.com/mattn/webapi-vim.git
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
