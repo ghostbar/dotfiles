@@ -1,7 +1,8 @@
 [general]
-ui = TTY.TTYUI
-accounts = GMail,RIVCO
-maxsynaccounts = 2
+ui = ttyui
+accounts = GMail,RIVCO,Eserre
+maxsynaccounts = 1
+maxage = 365
 
 [Account GMail]
 localrepository = GMail-Local
@@ -11,6 +12,10 @@ remoterepository = GMail-Remote
 localrepository = RIVCO-Local
 remoterepository = RIVCO-Remote
 
+[Account Eserre]
+localrepository = Eserre-Local
+remoterepository = Eserre-Remote
+
 [Repository GMail-Local]
 type = Maildir
 localfolders = ~/Mail/GMail
@@ -18,6 +23,10 @@ localfolders = ~/Mail/GMail
 [Repository RIVCO-Local]
 type = Maildir
 localfolders = ~/Mail/RIVCO
+
+[Repository Eserre-Local]
+type = Maildir
+localfolders = ~/Mail/Eserre
 
 [Repository GMail-Remote]
 type = Gmail
@@ -27,6 +36,7 @@ remotepassfile = ~/.offlineimap/GMail.pass
 realdelete = no
 trashfolder = [Google Mail]/Bin
 spamfolder = [Google Mail]/Spam
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Repository RIVCO-Remote]
 type = Gmail
@@ -34,6 +44,14 @@ remoteuser = joseluis@rivco.net
 remotepassfile = ~/.offlineimap/RIVCO.pass
 #folderfilter = lambda foldername: foldername not in '[Gmail]/All Mail'
 realdelete = no
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository Eserre-Remote]
+type = Gmail
+remoteuser = joseluis@eserre.com
+remotepassfile = ~/.offlineimap/Eserre.pass
+realdelete = no
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 # Mailbox name recorder
 
