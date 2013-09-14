@@ -44,7 +44,7 @@ set fcc_attach
 unset mime_forward
 set forward_format		= "Fwd: %s"
 set forward_decode
-set attribution			= "El %d, %n escribió:"
+set attribution			= "On %d, %n wrote:"
 set reply_to
 set reverse_name
 set include				= yes
