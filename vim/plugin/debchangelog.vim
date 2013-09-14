@@ -1,1 +1,0 @@
-/usr/share/vim/vim72/ftplugin/debchangelog.vim

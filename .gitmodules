@@ -21,16 +21,10 @@
 	url = /home/ghostbar/confs/chaos/vim-coffee-script
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
-	url = /home/ghostbar/confs/chaos/snipmate.vim/
+	url = git://github.com/ghostbar/snipmate.vim.git
 [submodule "vim/bundle/mustache.vim"]
 	path = vim/bundle/mustache.vim
 	url = git://github.com/juvenn/mustache.vim.git
-[submodule "vim/bundle/vim-handlebars"]
-	path = vim/bundle/vim-handlebars
-	url = /home/ghostbar/confs/chaos/vim-handlebars/
-[submodule "vim/bundle/vim-brunch"]
-	path = vim/bundle/vim-brunch
-	url = /home/ghostbar/confs/chaos/vim-brunch/
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
@@ -46,3 +40,15 @@
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
+[submodule "vim/bundle/javascript-libraries-syntax"]
+	path = vim/bundle/javascript-libraries-syntax
+	url = git://github.com/othree/javascript-libraries-syntax.vim.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/indentLine"]
+	path = vim/bundle/indentLine
+	url = git@github.com:Yggdroot/indentLine.git
