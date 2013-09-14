@@ -15,3 +15,5 @@
 	branch = auto
 [github]
 	user = ghostbar
+[push]
+	default = matching
