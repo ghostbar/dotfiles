@@ -33,8 +33,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git cake command-not-found coffee cpanm debian extract gem git-extras git-flow git-hubflow github heroku history-substring-search npm perl rails3 redis-cli ruby rsync rvm pip python vagrant virtualenvwrapper zsh-syntax-highlighting)
-plugin=(git command-not-found coffee extract git-extras git-flow github heroku history-substring-search npm redis-cli vagrant zsh-syntax-highlighting)
-
+plugin=(git command-not-found history-substring-search extract github git-extras npm heroku pip redis-cli vagrant zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 ###############################################################################
@@ -45,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 
 #########
 # Perlbrew
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 #########
 # Force rehash if nothing was auto-completed
@@ -76,6 +75,12 @@ for function in $HOME/.zsh/functions/*; do
 done
 
 #########
+# Enable autocompletion
+#autoload -U compinit
+#compinit
+#setopt completealiases
+
+#########
 # Enable caching of autocomplete
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -90,4 +95,4 @@ export PATH="$HOME/bin:/usr/local/share/python:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
