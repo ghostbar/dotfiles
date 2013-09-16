@@ -7,7 +7,6 @@ Basically there are lots of configuration dotfiles for:
 +	Bash (including extra file *~/.bash_vars* )
 +	Git
 +	SSH
-+	Vim
 +	dput
 +	irssi
 +	GPG
@@ -32,11 +31,11 @@ If you want to use them as they are then the best method is to use the `Makefile
   % make vim
 
 ## License and Copyright
-These files are released under the MIT-license. Please retain the copyright on the files.
+These files are released under the **Do what the fuck you want** for the files made by me. If there's other thing stated then definitely this release-license does not applies.
 
-© 2009-2012, Jose Luis Rivas `<ghostbar at debian.org>`
+© 2009-2013, Jose Luis Rivas `<me at ghostbar.co>`
 
 ## Contact
 You can contact me on twitter at [@ghostbar](http://www.twitter.com/ghostbar) or via email at `<joseluis at rivco.net>`.
 
-You can check my blog too, is at: [http://ghostbar.ath.cx](http://ghostbar.ath.cx)
+You can check my blog too, is at: [http://ghostbar.co](http://ghostbar.co)
