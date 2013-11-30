@@ -20,45 +20,46 @@ Licensed under MIT terms.
 "
 
 bash() {
-  [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
+  [ -e ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
   ln -s $PWD/bashrc ~/.bashrc
 
-  [ -f ~/.profile ] && mv ~/.profile ~/.profile.bak
+  [ -e ~/.profile ] && mv ~/.profile ~/.profile.bak
   ln -s $PWD/profile ~/.profile
 
-  [ -f ~/.shenv ] && mv ~/.shenv ~/.shenv.bak
+  [ -e ~/.shenv ] && mv ~/.shenv ~/.shenv.bak
   ln -s $PWD/shenv ~/.shenv
 
-  [ -f ~/.logout ] && mv ~/.logout ~/.logout.bak
+  [ -e ~/.logout ] && mv ~/.logout ~/.logout.bak
   ln -s $PWD/logout ~/.logout
 
-  [ -f ~/.aliases ] && mv ~/.aliases ~/.aliases.bak
+  [ -e ~/.aliases ] && mv ~/.aliases ~/.aliases.bak
   ln -s $PWD/aliases ~/.aliases
 }
 
 zsh() {
-  [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
+  [ -e ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
   ln -s $PWD/zshrc ~/.zshrc
 
-  [ -d ~/.zsh ] && mv ~/.zsh ~/.zsh.bak
+  [ -d ~/.zsh ] && mv ~/.zsh/ ~/.zsh.bak/
   ln -s $PWD/zsh ~/.zsh
 }
 
 powerline() {
-  ![ -d ~/.config ] && mkdir ~/.config
+  [ ! -e ~/.config ] && mkdir ~/.config
+  [ -e ~/.config/powerline ] && mv ~/.config/powerline ~/.config/powerline.bak/
   ln -s $PWD/powerline ~/.config/powerline
 }
 
 git() {
-  [ -f ~/.gitignore ] && mv ~/.gitignore ~/.gitignore.bak
+  [ -e ~/.gitignore ] && mv ~/.gitignore ~/.gitignore.bak
   ln -s $PWD/gitignore ~/.gitignore
 
-  [ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.bak
+  [ -e ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.bak
   ln -s $PWD/gitconfig ~/.gitconfig
 }
 
 tmux() {
-  [ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.bak
+  [ -e ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.bak
   ln -s $PWD/tmux.conf ~/.tmux.conf
 }
 
