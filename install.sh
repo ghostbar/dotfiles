@@ -1,3 +1,5 @@
+#!/bin/sh
+
 help="
 Options:
 
