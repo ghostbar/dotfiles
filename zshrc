@@ -71,6 +71,12 @@ if [ -e "$HOME/.shenv" ]; then
 fi
 
 #########
+# Load profile
+if [ -e "$HOME/.profile" ]; then
+  source "$HOME/.profile"
+fi
+
+#########
 # Load my functions
 for function in $HOME/.zsh/functions/*; do
   source $function
