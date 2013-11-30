@@ -78,9 +78,11 @@ fi
 
 #########
 # Load my functions
-for function in $HOME/.zsh/functions/*; do
-  source $function
-done
+if [ -e "$HOME/.zsh/functions" ]; then
+  for function in $HOME/.zsh/functions/*; do
+    source $function
+  done
+fi
 
 #########
 # Enable caching of autocomplete
