@@ -72,7 +72,7 @@ set signature			= ~/.mutt/signature
 set tmpdir				= ~/.mutt/temp
 
 # Commands
-set editor				= "/usr/bin/vim +/^$"
+set editor				= "vim +/^$"
 set ispell				= "/usr/bin/aspell -e -c"
 
 # Modular settings
