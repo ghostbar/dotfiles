@@ -9,6 +9,7 @@
 	br = branch
 [core]
 	excludesfile = /home/ghostbar/.gitignore
+	editor = vim
 [color]
 	diff = auto
 	status = auto

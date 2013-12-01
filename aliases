@@ -14,3 +14,7 @@ alias htop='TERM=screen htop'
 
 alias tmux='TERM=xterm-256color tmux'
 alias tmux-embed='unset TMUX && tmux'
+
+alias start_nginx='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+alias stop_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+alias restart_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist; launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
