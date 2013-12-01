@@ -98,11 +98,3 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 #########
 # Disable autocorrect
 unsetopt correct_all
-
-## Loading PATH
-export PATH="$HOME/bin:/usr/local/share/python:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
