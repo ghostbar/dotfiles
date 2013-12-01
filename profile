@@ -9,7 +9,7 @@ fi
 # set PATH so it includes /usr/local before the regular
 # this will help in MacOS X to use brew's installed version isntead of the
 # outdated on MacOS
-# export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -18,3 +18,6 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### This is a workaround so `nave` can work with Zsh.
+export PATH="${NAVEPATH}:$PATH"
