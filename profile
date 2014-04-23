@@ -21,3 +21,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### This is a workaround so `nave` can work with Zsh.
 export PATH="${NAVEPATH}:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+
+ulimit -n 8192

@@ -7,6 +7,7 @@ export LENNYCOW=/home/ghostbar/var/cache/pbuilder/lenny.cow
 export BSPATH=$SIDCOW
 export BSPATHEXP=/var/cache/pbuilder/experimental.cow
 export BSPATHTESTING=/var/cache/pbuilder/testing.cow
+export GOPATH=~/gocode
 #export AWT_TOOLKIT=MToolkit
 #export http_proxy=http://localhost:8123/
 #export https_proxy=http://localhost:8123/
