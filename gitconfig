@@ -8,7 +8,7 @@
 	co = checkout
 	br = branch
 [core]
-	excludesfile = /home/ghostbar/.gitignore
+	excludesfile = /Users/ghostbar/.gitignore_global
 	editor = vim
 [color]
 	diff = auto
