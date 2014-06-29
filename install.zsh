@@ -115,11 +115,24 @@ function envFiles {
   lnFile aliases aliases;
 }
 
+function zshEnvFiles {
+  checkFile zlogout zlogout;
+  lnFile zlogout zlogout;
+  checkFile zpreztorc zpreztorc;
+  lnFile zpreztorc zpreztorc;
+  checkFile zprofile zprofile;
+  lnFile zprofile zprofile;
+  checkFile zshenv zshenv;
+  lnFile zshenv zshenv;
+}
+
 function zsh {
   print 'Linking zsh configuration';
 
   checkFile zshrc zshrc;
   checkDir zsh zsh;
+
+  zshEnvFiles;
 
   if [[ -e $PWD/zshrc && -d $PWD/zsh ]]; then
     ln -s $PWD/zshrc ~/.zshrc;
