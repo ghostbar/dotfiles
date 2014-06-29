@@ -1,4 +1,6 @@
-export EDITOR=vim
+export EDITOR='vim'
+export PAGER='less'
+export DEBFULLNAME='Jose Luis Rivas'
 export DEBEMAIL=ghostbar@debian.org
 export BROWSER=google-chrome
 export SIDCOW=/var/cache/pbuilder/unstable.cow
@@ -7,7 +9,6 @@ export LENNYCOW=/home/ghostbar/var/cache/pbuilder/lenny.cow
 export BSPATH=$SIDCOW
 export BSPATHEXP=/var/cache/pbuilder/experimental.cow
 export BSPATHTESTING=/var/cache/pbuilder/testing.cow
-export GOPATH=~/gocode
-#export AWT_TOOLKIT=MToolkit
+
 #export http_proxy=http://localhost:8123/
 #export https_proxy=http://localhost:8123/
