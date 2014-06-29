@@ -26,7 +26,7 @@ Licensed under the MIT terms.
 ';
 
 function checkFile {
-  if [[ -e $HOME/.$1 && -e $PWD/$1 ]]; then
+  if [[ -e $HOME/.$1 && -e $PWD/$2 ]]; then
     mv $HOME/.$1 $HOME/.$1.bak;
   fi
 }
@@ -36,7 +36,7 @@ function checkDir {
     rm -rf $HOME/.$1.bak;
   fi
 
-  if [[ -d $HOME/.$1 && -d $PWD/$1 ]]; then
+  if [[ -d $HOME/.$1 && -d $PWD/$2 ]]; then
     mv $HOME/.$1 $HOME/.$1.bak
   fi
 }
@@ -75,13 +75,13 @@ function powerline {
 function git {
   print 'Linking git configuration';
 
-  checkFile gitignore;
+  checkFile gitignore gitconfig;
 
   if [[ -e $PWD/gitignore ]]; then
     ln -s $PWD/gitignore ~/.gitignore;
   fi
 
-  checkFile gitconfig;
+  checkFile gitconfig gitconfig;
 
   if [[ -e $PWD/gitconfig ]]; then
     ln -s $PWD/gitconfig ~/.gitconfig;
@@ -97,7 +97,7 @@ function git {
 function tmux {
   print 'Linking tmux configuration';
 
-  checkFile tmux.conf;
+  checkFile tmux.conf tmux.conf;
 
   if [[ -e $PWD/tmux.conf ]]; then
     ln -s $PWD/tmux.conf ~/.tmux.conf;
