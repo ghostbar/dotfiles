@@ -17,7 +17,7 @@ Options:
 -p/--powerline        - Install Powerline config
 -g/--git              - Install Git config
 -t/--tmux             - Install Tmux config
-'
+';
 
 version='
 Version: 0.2.0
