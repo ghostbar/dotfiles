@@ -174,6 +174,14 @@ function tmux {
 
   checkFile tmux.conf tmux.conf;
 
+  if [[ "$OSTYPE" == darwin* ]]; then
+    lnFile tmux.darwin.conf tmux.darwin.conf;
+  fi
+
+  if [[ "$OSTYPE" == linux* ]]; then
+    lnFile tmux.linux.conf tmux.linux.conf;
+  fi
+
   if [[ -e $PWD/tmux.conf ]]; then
     ln -s $PWD/tmux.conf ~/.tmux.conf;
     print "Your tmux configuration is ready to be used.";
