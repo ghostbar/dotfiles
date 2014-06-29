@@ -98,28 +98,36 @@ function checkDir {
 }
 
 function bash {
-  [ -e ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
-  ln -s $PWD/bashrc ~/.bashrc
+  print 'Linking bash configuration';
 
-  [ -e ~/.profile ] && mv ~/.profile ~/.profile.bak
-  ln -s $PWD/profile ~/.profile
+  checkFile bashrc bashrc;
+  lnFile bashrc bashrc;
+}
 
-  [ -e ~/.shenv ] && mv ~/.shenv ~/.shenv.bak
-  ln -s $PWD/shenv ~/.shenv
-
-  [ -e ~/.logout ] && mv ~/.logout ~/.logout.bak
-  ln -s $PWD/logout ~/.logout
-
-  [ -e ~/.aliases ] && mv ~/.aliases ~/.aliases.bak
-  ln -s $PWD/aliases ~/.aliases
+function envFiles {
+  checkFile profile profile;
+  lnFile profile profile;
+  checkFile shenv shenv;
+  lnFile shenv shenv;
+  checkFile logout logout;
+  lnFile logout logout;
+  checkFile aliases aliases;
+  lnFile aliases aliases;
 }
 
 function zsh {
-  [ -e ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
-  ln -s $PWD/zshrc ~/.zshrc
+  print 'Linking zsh configuration';
 
-  [ -d ~/.zsh ] && mv ~/.zsh/ ~/.zsh.bak/
-  ln -s $PWD/zsh ~/.zsh
+  checkFile zshrc zshrc;
+  checkDir zsh zsh;
+
+  if [[ -e $PWD/zshrc && -d $PWD/zsh ]]; then
+    ln -s $PWD/zshrc ~/.zshrc;
+    ln -s $PWD/zsh ~/.zsh;
+    print 'Your zsh configuration is ready to be used.';
+  else
+    print "There's no zsh config files in the current directory, maybe you are in the wrong one.";
+  fi
 }
 
 function powerline {
@@ -183,10 +191,11 @@ function showHelp {
 while test -n "$1"; do
   case $1 in
     (-v|--version)
-      echo "$version";
+      print $version;
       exit 0;;
     (-a|--all)
-      echo "Install all configs\n";
+      print "Will install everything";
+      envFiles;
       bash;
       zsh;
       powerline;
@@ -194,12 +203,11 @@ while test -n "$1"; do
       tmux;
       exit 0;;
     (-b|--bash)
-      echo "Install bash config\n";
+      envFiles;
       bash;
       exit 0;;
     (-z|--zsh)
-      echo "Install Zsh config\n";
-      bash;
+      envFiles;
       zsh;
       exit 0;;
     (-p|--powerline)
