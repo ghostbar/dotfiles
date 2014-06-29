@@ -126,11 +126,9 @@ while test -n "$1"; do
       powerline;
       exit 0;;
     (-g|--git)
-      echo "Install Git config\n";
       git;
       exit 0;;
     (-t|--tmux)
-      echo "Install Tmux config\n";
       tmux;
       exit 0;;
     (*)
