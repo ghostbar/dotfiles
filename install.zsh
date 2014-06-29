@@ -73,11 +73,25 @@ function powerline {
 }
 
 function git {
-  [ -e ~/.gitignore ] && mv ~/.gitignore ~/.gitignore.bak
-  ln -s $PWD/gitignore ~/.gitignore
+  print 'Linking git configuration';
 
-  [ -e ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.bak
-  ln -s $PWD/gitconfig ~/.gitconfig
+  checkFile gitignore;
+
+  if [[ -e $PWD/gitignore ]]; then
+    ln -s $PWD/gitignore ~/.gitignore;
+  fi
+
+  checkFile gitconfig;
+
+  if [[ -e $PWD/gitconfig ]]; then
+    ln -s $PWD/gitconfig ~/.gitconfig;
+  fi
+
+  if [[ -e $PWD/gitconfig && -e $PWD/gitignore ]]; then
+    print 'Your git configuration is ready to be used.';
+  else
+    print "There's no git files found in the current directory, maybe you are in the wrong one.";
+  fi
 }
 
 function tmux {
@@ -87,9 +101,9 @@ function tmux {
 
   if [[ -e $PWD/tmux.conf ]]; then
     ln -s $PWD/tmux.conf ~/.tmux.conf;
-    print "Your tmux configuration is ready to be used."
+    print "Your tmux configuration is ready to be used.";
   else
-    print "There's no" $PWD/tmux.conf", maybe you are in the wrong directory"
+    print "There's no" $PWD/tmux.conf", maybe you are in the wrong directory";
   fi
 
 }
