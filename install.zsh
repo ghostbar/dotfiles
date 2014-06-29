@@ -83,15 +83,13 @@ function git {
 function tmux {
   print 'Linking tmux configuration';
 
-  if [[ -e ~/.tmux.conf && -e $PWD/tmux.conf ]]; then
-    mv ~/.tmux.conf ~/.tmux.conf.bak;
-  fi
+  checkFile tmux.conf;
 
   if [[ -e $PWD/tmux.conf ]]; then
     ln -s $PWD/tmux.conf ~/.tmux.conf;
     print "Your tmux configuration is ready to be used."
   else
-    print "There's no" $PWD/tmux.conf", maybe you are in the wront directory"
+    print "There's no" $PWD/tmux.conf", maybe you are in the wrong directory"
   fi
 
 }
