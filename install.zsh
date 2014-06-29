@@ -67,9 +67,20 @@ function zsh {
 }
 
 function powerline {
-  [ ! -e ~/.config ] && mkdir ~/.config
-  [ -e ~/.config/powerline ] && mv ~/.config/powerline ~/.config/powerline.bak/
-  ln -s $PWD/powerline ~/.config/powerline
+  print 'Linking powerline configuration';
+
+  if [[ ! -e ~/.config && ! -d ~/.config ]]; then
+    mkdir ~/.config;
+  fi
+
+  checkDir config/powerline powerline;
+
+  if [[ -d $PWD/powerline ]]; then
+    ln -s $PWD/powerline ~/.config/powerline;
+    print 'Your powerline configuration is ready to be used.';
+  else
+    print "There's no" $PWD/powerline "directory, maybe you are in the wrong one.";
+  fi
 }
 
 function git {
@@ -136,7 +147,6 @@ while test -n "$1"; do
       zsh;
       exit 0;;
     (-p|--powerline)
-      echo "Install Powerline config\n";
       powerline;
       exit 0;;
     (-g|--git)
