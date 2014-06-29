@@ -25,12 +25,68 @@ Version: 0.2.0
 Licensed under the MIT terms.
 ';
 
+# checkFile()
+# -----------
+#
+# Checks if a file exists on $HOME, if it does then adds it the suffix
+# .bak
+#
+# Arguments:
+# + path of file on $HOME
+# + path of file on $PWD
+#
+# Example:
+#
+# checkFile pathOnHome pathOnPwd
+# checkFile config/crazy crazy
+# -> will check ~/.config/crazy and $PWD/crazy, if true then moves
+# ~/.config/crazy to ~/.config/crazy.bak
+#
 function checkFile {
   if [[ -e $HOME/.$1 && -e $PWD/$2 ]]; then
     mv $HOME/.$1 $HOME/.$1.bak;
   fi
 }
 
+# lnFile()
+# -----------
+#
+# Links a file from $PWD to $HOME.
+#
+# Arguments:
+# + path of file on $HOME
+# + path of file on $PWD
+#
+# Example:
+#
+# lnFile pathOnHome pathOnPwd
+# lnFile config/crazy crazy
+# -> will link to ~/.config/crazy from $PWD/crazy
+#
+function lnFile {
+  if [[ -e $PWD/$2 ]]; then
+    print "Linking" $PWD/$2 "to" $HOME/.$1;
+    ln -s $PWD/$2 $HOME/.$1;
+  fi
+}
+
+# checkDir()
+# ----------
+#
+# Checks if a directory exists in $HOME and if it does add's it the suffix
+# .bak.
+#
+# Arguments:
+# + path of dir on $HOME
+# + path of dir on $PWD
+#
+# Example:
+#
+# checkDir pathOnHome pathOnPwd
+# checkDir config/crazy crazy
+# -> will check if ~/.config/crazy exists and $PWD/crazy, if true then moves
+# ~/.config/crazy to ~/.config/crazy.bak
+#
 function checkDir {
   if [[ -d $HOME/.$1.bak ]]; then
     rm -rf $HOME/.$1.bak;
