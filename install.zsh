@@ -23,7 +23,23 @@ version='
 Version: 0.2.0
 © 2013-2014, Jose Luis Rivas <me@ghostbar.co>
 Licensed under the MIT terms.
-'
+';
+
+function checkFile {
+  if [[ -e $HOME/.$1 && -e $PWD/$1 ]]; then
+    mv $HOME/.$1 $HOME/.$1.bak;
+  fi
+}
+
+function checkDir {
+  if [[ -d $HOME/.$1.bak ]]; then
+    rm -rf $HOME/.$1.bak;
+  fi
+
+  if [[ -d $HOME/.$1 && -d $PWD/$1 ]]; then
+    mv $HOME/.$1 $HOME/.$1.bak
+  fi
+}
 
 function bash {
   [ -e ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
