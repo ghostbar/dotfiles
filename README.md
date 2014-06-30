@@ -31,9 +31,11 @@ If you want to use them as they are then the best method is to use the `Makefile
   % make vim
 
 ## License and Copyright
-These files are released under the **Do what the fuck you want** for the files made by me. If there's other thing stated then definitely this release-license does not applies.
+Written from 2009 to 2014 by Jose Luis Rivas <me@ghostbar.co> 
 
-© 2009-2013, Jose Luis Rivas `<me at ghostbar.co>`
+To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty. 
+
+You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
 
 ## Contact
 You can contact me on twitter at [@ghostbar](http://www.twitter.com/ghostbar) or via email at `<joseluis at rivco.net>`.
