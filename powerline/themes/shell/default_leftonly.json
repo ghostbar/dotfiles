@@ -1,33 +1,33 @@
 {
-	"default_module": "powerline.segments.common",
 	"segments": {
 		"left": [
 			{
-				"name": "hostname",
-				"before": " "
+				"function": "powerline.segments.common.net.hostname",
+				"priority": 10
 			},
 			{
-				"name": "user"
+				"function": "powerline.segments.common.env.user",
+				"priority": 30
 			},
 			{
-				"name": "virtualenv",
-				"before": "ⓔ  "
+				"function": "powerline.segments.common.env.virtualenv",
+				"priority": 50
 			},
 			{
-				"name": "branch",
-				"before": " "
+				"function": "powerline.segments.common.vcs.branch",
+				"priority": 40
 			},
 			{
-				"name": "cwd",
-				"args": {
-					"dir_limit_depth": 1
-				},
-				"divider_highlight_group": "cwd:divider"
+				"function": "powerline.segments.shell.cwd",
+				"priority": 10
 			},
 			{
-				"name": "last_status",
-				"highlight_group": ["exit_fail"],
-				"module": "powerline.segments.shell"
+				"function": "powerline.segments.shell.jobnum",
+				"priority": 20
+			},
+			{
+				"function": "powerline.segments.shell.last_status",
+				"priority": 10
 			}
 		]
 	}

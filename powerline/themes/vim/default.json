@@ -2,98 +2,116 @@
 	"segments": {
 		"left": [
 			{
-				"name": "mode",
+				"function": "mode",
 				"exclude_modes": ["nc"]
 			},
 			{
-				"name": "paste_indicator",
+				"function": "visual_range",
+				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
+				"priority": 10
+			},
+			{
+				"function": "paste_indicator",
 				"exclude_modes": ["nc"],
 				"priority": 10
 			},
 			{
-				"name": "branch",
+				"function": "branch",
 				"exclude_modes": ["nc"],
-				"priority": 60,
-				"before": " ",
-				"divider_highlight_group": "branch:divider"
+				"priority": 30
 			},
 			{
-				"name": "readonly_indicator",
-				"draw_divider": false,
+				"function": "readonly_indicator",
+				"draw_soft_divider": false,
 				"after": " "
 			},
 			{
-				"name": "file_directory",
+				"function": "file_scheme",
+				"priority": 20
+			},
+			{
+				"function": "file_directory",
 				"priority": 40,
-				"draw_divider": false
+				"draw_soft_divider": false
 			},
 			{
-				"name": "file_name",
-				"draw_divider": false
+				"function": "file_name",
+				"draw_soft_divider": false
 			},
 			{
-				"name": "file_vcs_status",
+				"function": "file_vcs_status",
 				"before": " ",
-				"draw_divider": false
+				"draw_soft_divider": false
 			},
 			{
-				"name": "modified_indicator",
-				"args": { "text": "+" },
+				"function": "modified_indicator",
 				"before": " "
+			},
+			{
+				"exclude_modes": ["i", "R", "Rv"],
+				"function": "trailing_whitespace",
+				"display": false,
+				"priority": 60
+			},
+			{
+				"exclude_modes": ["nc"],
+				"function": "powerline.segments.vim.plugin.syntastic.syntastic",
+				"priority": 50
+			},
+			{
+				"exclude_modes": ["nc"],
+				"function": "powerline.segments.vim.plugin.tagbar.current_tag",
+				"draw_soft_divider": false,
+				"priority": 50
 			},
 			{
 				"type": "string",
 				"highlight_group": ["background"],
-				"draw_divider": false,
+				"draw_soft_divider": false,
+				"draw_hard_divider": false,
 				"width": "auto"
 			}
 		],
 		"right": [
 			{
-				"name": "file_format",
-				"draw_divider": false,
+				"function": "file_format",
+				"draw_soft_divider": false,
 				"exclude_modes": ["nc"],
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
+				"priority": 60
 			},
 			{
-				"name": "file_encoding",
+				"function": "file_encoding",
 				"exclude_modes": ["nc"],
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
+				"priority": 60
 			},
 			{
-				"name": "file_type",
+				"function": "file_type",
 				"exclude_modes": ["nc"],
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
+				"priority": 60
 			},
 			{
-				"name": "line_percent",
-				"args": { "gradient": true },
-				"priority": 30,
-				"after": "%",
+				"function": "line_percent",
+				"priority": 50,
 				"width": 4,
 				"align": "r"
 			},
 			{
 				"type": "string",
-				"contents": " ",
+				"name": "line_current_symbol",
 				"highlight_group": ["line_current_symbol", "line_current"]
 			},
 			{
-				"name": "line_current",
-				"draw_divider": false,
+				"function": "line_current",
+				"draw_soft_divider": false,
 				"width": 3,
 				"align": "r"
 			},
 			{
-				"name": "virtcol_current",
-				"draw_divider": false,
-				"priority": 30,
+				"function": "virtcol_current",
+				"draw_soft_divider": false,
+				"priority": 20,
 				"before": ":",
 				"width": 3,
-				"highlight_group": ["col_current"],
 				"align": "l"
 			}
 		]

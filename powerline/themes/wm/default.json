@@ -1,25 +1,23 @@
 {
-	"default_module": "powerline.segments.common",
 	"segments": {
 		"right": [
 			{
-				"name": "weather",
-				"priority": 50,
-				"divider_highlight_group": "background:divider"
+				"function": "powerline.segments.common.wthr.weather",
+				"priority": 50
 			},
 			{
-				"name": "date"
+				"function": "powerline.segments.common.time.date"
 			},
 			{
-				"name": "date",
-				"args": {"format": "%H:%M"},
-				"before": "⌚ ",
-				"highlight_group": ["time", "date"],
-				"divider_highlight_group": "time:divider"
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
 			},
 			{
-				"name": "email_imap_alert",
-				"before": "✉ ",
+				"function": "powerline.segments.common.mail.email_imap_alert",
 				"priority": 10,
 				"args": {
 					"username": "",
