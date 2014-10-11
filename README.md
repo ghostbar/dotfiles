@@ -25,6 +25,12 @@ If you want to use them as they are then the best method is to use the `install.
     % zsh install.zsh --bash
     % zsh install.zsh --vim
 
+## Known issues
+
+### While upgrading/with newer powerline
+
+With the lastest `powerline`'s and the previous version of this repo (until ghostbar/dotfiles@e36c4c6c6905a57349022b1aff4e2e45709c4b4b) you may have encounter some issues specially with the configurations. I changed them so you should update to the latest available version here on GitHub to fix that issue.
+
 ## License and Copyright
 Written from 2009 to 2014 by Jose Luis Rivas `<me@ghostbar.co>`
 
