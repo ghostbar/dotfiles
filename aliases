@@ -11,6 +11,7 @@ alias pp-tag='svn-buildpackage --svn-tag-only'
 alias ts='task'
 
 alias htop='TERM=screen htop'
+alias irssi='TERM=screen irssi'
 
 alias tmux='TERM=xterm-256color tmux'
 alias tmux-embed='unset TMUX && tmux'
