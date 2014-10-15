@@ -12,6 +12,7 @@ alias ts='task'
 
 alias htop='TERM=screen htop'
 alias irssi='TERM=screen irssi'
+alias mutt='TERM=screen mutt'
 
 alias tmux='TERM=xterm-256color tmux'
 alias tmux-embed='unset TMUX && tmux'
