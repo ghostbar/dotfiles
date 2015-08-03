@@ -39,3 +39,5 @@ export PATH="$GOPATH/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ulimit -n 8192
+
+# vim: ft=zsh
