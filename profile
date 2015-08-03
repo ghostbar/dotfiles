@@ -6,15 +6,15 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 #Determine what OS is running in
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   OS='mac'
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   OS='linux'
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
   OS='cygwin'
 fi
 
-if [ "$OS" == "mac"]; then
+if [ "$OS" = "mac" ]; then
   # set PATH so it includes /usr/local before the regular
   # this will help in MacOS X to use brew's installed version isntead of the
   # outdated on MacOS
