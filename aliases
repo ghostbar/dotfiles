@@ -17,6 +17,19 @@ alias mutt='TERM=screen mutt'
 alias tmux='TERM=xterm-256color tmux'
 alias tmux-embed='unset TMUX && tmux'
 
-alias start_nginx='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
-alias stop_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
-alias restart_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist; launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+#Determine what OS is running in
+if [ "$(uname)" == "Darwin" ]; then
+  OS='mac'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  OS='linux'
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+  OS='cygwin'
+fi
+
+if [ "$OS" == "mac" ]; then
+  alias start_nginx='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+  alias stop_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+  alias restart_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist; launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+fi
+
+# vim: ft=zsh
