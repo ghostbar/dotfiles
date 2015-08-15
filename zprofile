@@ -3,6 +3,28 @@
 # Ensure path arrays do not contain duplicates
 typeset -gU cdpath fpath mailpath path;
 
+#Determine what OS is running in
+if [ "$(uname)" = "Darwin" ]; then
+  OS='mac'
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  OS='linux'
+elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+  OS='cygwin'
+fi
+
+if [ "$OS" = "mac" ]; then
+  # set PATH so it includes /usr/local before the regular
+  # this will help in MacOS X to use brew's installed version isntead of the
+  # outdated on MacOS
+  #
+  # On Mac we use Postgres.app
+  path=(
+    /usr/local/{bin/sbin}
+    /Applications/Postgres.app/Contents/Versions/9.4/bin
+    $path
+  )
+fi
+
 # Set the basic list for the path
 path=(
   /usr/local/{bin/sbin}
