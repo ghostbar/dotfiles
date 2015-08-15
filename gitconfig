@@ -1,5 +1,5 @@
 [user]
-	name = Jose Luis Rivas
+	name = Jose-Luis Rivas
 	email = me@ghostbar.co
 [alias]
 	ci = commit
@@ -18,3 +18,7 @@
 	user = ghostbar
 [push]
 	default = matching
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
