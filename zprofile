@@ -23,6 +23,13 @@ if [ "$OS" = "mac" ]; then
     /Applications/Postgres.app/Contents/Versions/9.4/bin
     $path
   )
+
+  if [ -d /usr/texbin ]; then
+    path=(
+      /usr/texbin
+      $path
+    )
+  fi
 fi
 
 # Set the basic list for the path
@@ -55,7 +62,7 @@ fi
 # If there's a $GOPATH, then load it
 if [[ -n $GOPATH ]]; then
   path=(
-    $GOPATH 
+    $GOPATH/bin 
     $path
   );
 fi
