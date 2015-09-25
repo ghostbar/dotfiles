@@ -56,15 +56,7 @@ fi
 
 # If there's a ~/gocode folder, then there's where $GOPATH should point to.
 if [[ -d $HOME/gocode ]]; then
-  export GOPATH=~/gocode;
-fi
-
-# If there's a $GOPATH, then load it
-if [[ -n $GOPATH ]]; then
-  path=(
-    $GOPATH/bin 
-    $path
-  );
+  export GOPATH=~/gocode/bin;
 fi
 
 # If there's $NAVEPATH then load it to the $PATH
