@@ -36,6 +36,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="${NAVEPATH}:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
+if [ -d "$HOME/.nvm" ] ; then
+  . ~/.nvm/nvm.sh
+fi
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ulimit -n 8192
