@@ -1,9 +1,0 @@
-# Netfilter/IPtables - allow incomming SSH requests
-# Note: some operating systems send SYN-ACK, FIN-ACK and RST-ACK
-
-/sbin/iptables -N SSH
-/sbin/iptables -A SSH -m limit --limit 1/second -p tcp --tcp-flags SYN,FIN,RST,URG,PSH RST --dport 22 -j ACCEPT
-/sbin/iptables -A SSH -m limit --limit 1/second -p tcp --tcp-flags SYN,FIN,RST,URG,PSH FIN --dport 22 -j ACCEPT
-/sbin/iptables -A SSH -m limit --limit 1/second -p tcp --tcp-flags SYN,FIN,RST,URG,PSH SYN --dport 22 -j ACCEPT
-/sbin/iptables -A SSH -m state --state ESTABLISHED,RELATED -p tcp --dport 22 -j ACCEPT
-

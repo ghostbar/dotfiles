@@ -2,6 +2,12 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile";
 fi
 
-if [[ -e $HOME/.shenv ]]; then
-  source $HOME/.shenv;
-fi
+export EDITOR='vim'
+export TERM='xterm-256color'
+export PAGER='less'
+export DEBFULLNAME='Jose Luis Rivas'
+export FULLNAME='Jose Luis Rivas'
+export EMAIL='me@ghostbar.co'
+export AUTHOR='Jose-Luis Rivas <me@ghostbar.co>'
+export DEBEMAIL='ghostbar@debian.org'
+export BROWSER=google-chrome
