@@ -95,29 +95,29 @@ function checkDir {
 }
 
 function zshEnvFiles {
-  checkFile zlogout zlogout;
-  lnFile zlogout zlogout;
-  checkFile zpreztorc zpreztorc;
-  lnFile zpreztorc zpreztorc;
-  checkFile zprofile zprofile;
-  lnFile zprofile zprofile;
-  checkFile zshenv zshenv;
-  lnFile zshenv zshenv;
-  checkFile aliases aliases;
-  lnFile aliases aliases;
+  checkFile zlogout zshfiles/zlogout;
+  lnFile zlogout zshfiles/zlogout;
+  checkFile zpreztorc zshfiles/zpreztorc;
+  lnFile zpreztorc zshfiles/zpreztorc;
+  checkFile zprofile zshfiles/zprofile;
+  lnFile zprofile zshfiles/zprofile;
+  checkFile zshenv zshfiles/zshenv;
+  lnFile zshenv zshfiles/zshenv;
+  checkFile aliases zshfiles/aliases;
+  lnFile aliases zshfiles/aliases;
 }
 
 function zsh {
   print 'Linking zsh configuration';
 
-  checkFile zshrc zshrc;
-  checkDir zsh zsh;
+  checkFile zshrc zshfiles/zshrc;
+  checkDir zsh zshfiles/zsh;
 
   zshEnvFiles;
 
-  if [[ -e $PWD/zshrc && -d $PWD/zsh ]]; then
-    ln -s $PWD/zshrc ~/.zshrc;
-    ln -s $PWD/zsh ~/.zsh;
+  if [[ -e $PWD/zshfiles/zshrc && -d $PWD/zshfiles/zsh ]]; then
+    ln -s $PWD/zshfiles/zshrc ~/.zshrc;
+    ln -s $PWD/zshfiles/zsh ~/.zsh;
     print 'Your zsh configuration is ready to be used.';
   else
     print "There's no zsh config files in the current directory, maybe you are in the wrong one.";
@@ -128,19 +128,19 @@ function zsh {
 function git {
   print 'Linking git configuration';
 
-  checkFile gitignore gitconfig;
+  checkFile gitignore gitfiles/gitconfig;
 
-  if [[ -e $PWD/gitignore ]]; then
-    ln -s $PWD/gitignore ~/.gitignore;
+  if [[ -e $PWD/gitfiles/gitignore ]]; then
+    ln -s $PWD/gitfiles/gitignore ~/.gitignore;
   fi
 
-  checkFile gitconfig gitconfig;
+  checkFile gitconfig gitfiles/gitconfig;
 
-  if [[ -e $PWD/gitconfig ]]; then
-    ln -s $PWD/gitconfig ~/.gitconfig;
+  if [[ -e $PWD/gitfiles/gitconfig ]]; then
+    ln -s $PWD/gitfiles/gitconfig ~/.gitconfig;
   fi
 
-  if [[ -e $PWD/gitconfig && -e $PWD/gitignore ]]; then
+  if [[ -e $PWD/gitfiles/gitconfig && -e $PWD/gitfiles/gitignore ]]; then
     print 'Your git configuration is ready to be used.';
   else
     print "There's no git files found in the current directory, maybe you are in the wrong one.";
@@ -150,21 +150,21 @@ function git {
 function tmux {
   print 'Linking tmux configuration';
 
-  checkFile tmux.conf tmux.conf;
+  checkFile tmux.conf tmuxfiles/tmux.conf;
 
   if [[ "$OSTYPE" == darwin* ]]; then
-    lnFile tmux.darwin.conf tmux.darwin.conf;
+    lnFile tmux.darwin.conf tmuxfiles/tmux.darwin.conf;
   fi
 
   if [[ "$OSTYPE" == linux* ]]; then
-    lnFile tmux.linux.conf tmux.linux.conf;
+    lnFile tmux.linux.conf tmuxfiles/tmux.linux.conf;
   fi
 
-  if [[ -e $PWD/tmux.conf ]]; then
-    ln -s $PWD/tmux.conf ~/.tmux.conf;
+  if [[ -e $PWD/tmuxfiles/tmux.conf ]]; then
+    ln -s $PWD/tmuxfiles/tmux.conf ~/.tmux.conf;
     print "Your tmux configuration is ready to be used.";
   else
-    print "There's no" $PWD/tmux.conf", maybe you are in the wrong directory";
+    print "There's no" $PWD/tmuxfiles/tmux.conf", maybe you are in the wrong directory";
   fi
 
 }
