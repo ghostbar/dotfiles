@@ -153,10 +153,12 @@ function tmux {
   checkFile tmux.conf tmuxfiles/tmux.conf;
 
   if [[ "$OSTYPE" == darwin* ]]; then
+    checkFile tmux.darwin.conf tmuxfiles/tmux.darwin.conf;
     lnFile tmux.darwin.conf tmuxfiles/tmux.darwin.conf;
   fi
 
   if [[ "$OSTYPE" == linux* ]]; then
+    checkFile tmux.linux.conf tmuxfiles/tmux.linux.conf;
     lnFile tmux.linux.conf tmuxfiles/tmux.linux.conf;
   fi
 
