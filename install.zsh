@@ -4,24 +4,21 @@ help='
 Usage:
 
 zsh install.zsh [-v|--version] [-h|--help] [-a|--all] \
-  [-b|--bash] [-z|--zsh] [-p|--powerline] [-g|--git] \
-  [-t|--tmux]
+  [-z|--zsh] [-g|--git] [-t|--tmux]
 
 Options:
 
 -v/--version          - Print version
 -h/--help             - Print help
 -a/--all              - Install all config
--b/--bash             - Install Bash config
 -z/--zsh              - Install Zsh config
--p/--powerline        - Install Powerline config
 -g/--git              - Install Git config
 -t/--tmux             - Install Tmux config
 ';
 
 version='
-Version: 0.2.0
-© 2013-2014, Jose Luis Rivas <me@ghostbar.co>
+Version: 1.0.0
+© 2013-2015, Jose-Luis Rivas <me@ghostbar.co>
 Licensed under the MIT terms.
 ';
 
@@ -97,24 +94,6 @@ function checkDir {
   fi
 }
 
-function bash {
-  print 'Linking bash configuration';
-
-  checkFile bashrc bashrc;
-  lnFile bashrc bashrc;
-}
-
-function envFiles {
-  checkFile profile profile;
-  lnFile profile profile;
-  checkFile shenv shenv;
-  lnFile shenv shenv;
-  checkFile logout logout;
-  lnFile logout logout;
-  checkFile aliases aliases;
-  lnFile aliases aliases;
-}
-
 function zshEnvFiles {
   checkFile zlogout zlogout;
   lnFile zlogout zlogout;
@@ -124,6 +103,8 @@ function zshEnvFiles {
   lnFile zprofile zprofile;
   checkFile zshenv zshenv;
   lnFile zshenv zshenv;
+  checkFile aliases aliases;
+  lnFile aliases aliases;
 }
 
 function zsh {
@@ -143,22 +124,6 @@ function zsh {
   fi
 }
 
-function powerline {
-  print 'Linking powerline configuration';
-
-  if [[ ! -e ~/.config && ! -d ~/.config ]]; then
-    mkdir ~/.config;
-  fi
-
-  checkDir config/powerline powerline;
-
-  if [[ -d $PWD/powerline ]]; then
-    ln -s $PWD/powerline ~/.config/powerline;
-    print 'Your powerline configuration is ready to be used.';
-  else
-    print "There's no" $PWD/powerline "directory, maybe you are in the wrong one.";
-  fi
-}
 
 function git {
   print 'Linking git configuration';
@@ -216,23 +181,13 @@ while test -n "$1"; do
       exit 0;;
     (-a|--all)
       print "Will install everything";
-      envFiles;
-      bash;
       zsh;
-      powerline;
       git;
       tmux;
-      exit 0;;
-    (-b|--bash)
-      envFiles;
-      bash;
       exit 0;;
     (-z|--zsh)
       envFiles;
       zsh;
-      exit 0;;
-    (-p|--powerline)
-      powerline;
       exit 0;;
     (-g|--git)
       git;
