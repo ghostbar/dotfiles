@@ -33,6 +33,6 @@ if [ "$OS" = "mac" ]; then
 fi
 
 alias docker_clear_containers='docker rm $(docker ps -a -q)'
-alias docker_clear_images='docker rmi $(docker images | grep "^<none>" | awk "{ print $3 }")'
+alias docker_clear_images="docker rmi $(docker images | grep '^<none>' | awk '{ print $3 }')"
 
 # vim: ft=zsh
