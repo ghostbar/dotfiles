@@ -32,7 +32,9 @@ if [ "$OS" = "mac" ]; then
   alias restart_nginx='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist; launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 fi
 
-alias docker_clear_containers='docker rm $(docker ps -a -q)'
-alias docker_clear_images='docker rmi $(docker images | grep ''^<none>'' | awk ''{ print $3 }'')'
+alias docker_list_untagged_images='docker images | grep ''^<none>'' | awk ''{ print $3 }'''
+alias docker_list_exited_containers='docker ps -a -q'
+alias docker_clear_containers='docker rm $(docker_list_exited_containers)'
+alias docker_clear_images='docker rmi $(docker_list_untagged_images)'
 
 # vim: ft=zsh
