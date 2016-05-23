@@ -12,6 +12,10 @@ elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
   OS='cygwin'
 fi
 
+if [ "$(which gpg2)" != "gpg2 not found" ]; then
+  GPG=gpg2
+fi
+
 if [ "$OS" = "mac" ]; then
   # set PATH so it includes /usr/local before the regular
   # this will help in MacOS X to use brew's installed version isntead of the
