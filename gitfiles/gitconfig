@@ -1,6 +1,7 @@
 [user]
 	name = Jose-Luis Rivas
 	email = me@ghostbar.co
+	signingKey = b9ac8c43
 [alias]
 	ci = commit
 	st = status
