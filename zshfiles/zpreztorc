@@ -115,6 +115,12 @@ zstyle ':prezto:module:prompt' theme 'steeef'
 zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 #
+# Utilities
+# 
+
+zstyle ':prezto:module:utility:diff' color 'no'
+
+#
 # Syntax Highlighting
 #
 
