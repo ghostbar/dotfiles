@@ -24,7 +24,7 @@ if [ "$OS" = "mac" ]; then
   # On Mac we use Postgres.app
   path=(
     /usr/local/{bin/sbin}
-    /Applications/Postgres.app/Contents/Versions/9.4/bin
+    /Applications/Postgres.app/Contents/Versions/latest/bin
     $(brew --prefix coreutils)/libexec/gnubin
     $path
   )
@@ -63,7 +63,15 @@ fi
 if [[ -d $HOME/gocode ]]; then
   export GOPATH=~/gocode;
   path=(
-    $GOPATH/bin
+    ~/gocode/bin
+    $path
+  );
+fi
+
+if [[ -d $HOME/code/src ]]; then
+  export GOPATH=~/code;
+  path=(
+    ~/code/bin
     $path
   );
 fi
