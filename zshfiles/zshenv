@@ -2,6 +2,10 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile";
 fi
 
+if [[ -e "$HOME/.zprivate" ]]; then
+  source "$HOME/.zprivate";
+fi
+
 export EDITOR='vim'
 export TERM='xterm-256color'
 export PAGER='less'

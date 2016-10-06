@@ -13,7 +13,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
 fi
 
 if [ "$(which gpg2)" != "gpg2 not found" ]; then
-  GPG=gpg2
+  export GPG=gpg2
 fi
 
 if [ "$OS" = "mac" ]; then
@@ -59,9 +59,11 @@ if [[ -d /usr/local/heroku/bin ]]; then
   );
 fi
 
+export GOPATH=""
+
 # If there's a ~/gocode folder, then there's where $GOPATH should point to.
 if [[ -d $HOME/gocode ]]; then
-  export GOPATH=~/gocode;
+  export GOPATH="$GOPATH:$HOME/gocode";
   path=(
     ~/gocode/bin
     $path
@@ -69,7 +71,7 @@ if [[ -d $HOME/gocode ]]; then
 fi
 
 if [[ -d $HOME/code/src ]]; then
-  export GOPATH=~/code;
+  export GOPATH="$GOPATH:$HOME/code";
   path=(
     ~/code/bin
     $path
