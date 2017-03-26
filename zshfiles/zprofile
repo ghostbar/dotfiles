@@ -64,11 +64,9 @@ if [[ -d /usr/local/heroku/bin ]]; then
   );
 fi
 
-export GOPATH=""
-
 # If there's a ~/gocode folder, then there's where $GOPATH should point to.
 if [[ -d $HOME/gocode ]]; then
-  export GOPATH="$GOPATH:$HOME/gocode";
+  export GOPATH="$HOME/gocode";
   path=(
     ~/gocode/bin
     $path
@@ -76,7 +74,7 @@ if [[ -d $HOME/gocode ]]; then
 fi
 
 if [[ -d $HOME/code/src ]]; then
-  export GOPATH="$GOPATH:$HOME/code";
+  export GOPATH="$HOME/code";
   path=(
     ~/code/bin
     $path
