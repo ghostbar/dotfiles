@@ -42,3 +42,10 @@ fi
 #########
 # Disable autocorrect
 unsetopt correct_all
+
+
+#########
+## Load private stuff
+if [[ -e "$HOME/.zprivate" ]]; then
+  source "$HOME/.zprivate";
+fi
