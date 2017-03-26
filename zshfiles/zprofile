@@ -27,6 +27,13 @@ if [ "$OS" = "mac" ]; then
     $path
   )
 
+  if [ -d /usr/local/sbin ]; then
+    path=(
+      /usr/local/sbin
+      $path
+    )
+  fi
+
   if [ -d /usr/texbin ]; then
     path=(
       /usr/texbin
