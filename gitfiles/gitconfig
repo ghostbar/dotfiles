@@ -11,6 +11,7 @@
 [core]
 	excludesfile = /Users/ghostbar/.gitignore_global
 	editor = vim
+	pager = diff-highlight | less
 [color]
 	diff = auto
 	status = auto
