@@ -49,3 +49,5 @@ unsetopt correct_all
 if [[ -e "$HOME/.zprivate" ]]; then
   source "$HOME/.zprivate";
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
