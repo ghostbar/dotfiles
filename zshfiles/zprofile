@@ -23,6 +23,7 @@ if [ "$OS" = "mac" ]; then
   path=(
     $(brew --prefix coreutils)/libexec/gnubin
     $(brew --prefix gnu-sed)/libexec/gnubin
+    $(brew --prefix git)/share/git-core/contrib/diff-highlight
     /usr/local/{bin/sbin}
     $path
   )
