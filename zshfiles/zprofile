@@ -28,6 +28,14 @@ if [ "$OS" = "mac" ]; then
     $path
   )
 
+  if [ -d /usr/local/opt/icu4c/bin ]; then
+    path=(
+      /usr/local/opt/icu4c/bin
+      /usr/local/opt/icu4c/sbin
+      $path
+    )
+  fi
+
   if [ -d /usr/local/sbin ]; then
     path=(
       /usr/local/sbin
