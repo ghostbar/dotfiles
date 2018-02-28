@@ -162,6 +162,9 @@ function tmux {
     lnFile tmux.linux.conf tmuxfiles/tmux.linux.conf;
   fi
 
+    checkFile tmux.nord.conf tmuxfiles/tmux.nord.conf;
+    lnFile tmux.nord.conf tmuxfiles/tmux.nord.conf;
+
   if [[ -e $PWD/tmuxfiles/tmux.conf ]]; then
     ln -s $PWD/tmuxfiles/tmux.conf ~/.tmux.conf;
     print "Your tmux configuration is ready to be used.";
