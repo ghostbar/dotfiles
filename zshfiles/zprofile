@@ -57,9 +57,9 @@ if [ "$OS" = "linux" ]; then
     $path
   )
 
-  if [ -f /usr/share/doc/git/contrib/diff-highligh/diff-highlight ]; then
+  if [ -f /usr/share/doc/git/contrib/diff-highlight/diff-highlight ]; then
     path=(
-      /usr/share/doc/git/contrib/diff-highligh
+      /usr/share/doc/git/contrib/diff-highlight
       $path
     )
   fi
