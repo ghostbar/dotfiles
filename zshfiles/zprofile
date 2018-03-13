@@ -51,6 +51,20 @@ if [ "$OS" = "mac" ]; then
   fi
 fi
 
+if [ "$OS" = "linux" ]; then
+  path=(
+    /usr/local/{bin/sbin}
+    $path
+  )
+
+  if [ -f /usr/share/doc/git/contrib/diff-highligh/diff-highlight ]; then
+    path=(
+      /usr/share/doc/git/contrib/diff-highligh
+      $path
+    )
+  fi
+fi
+
 # Set the basic list for the path
 path=(
   /usr/local/{bin/sbin}
