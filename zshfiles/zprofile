@@ -63,6 +63,14 @@ if [ "$OS" = "linux" ]; then
       $path
     )
   fi
+
+  if [ -f /usr/share/git/diff-highlight/diff-highlight ]; then
+    path=(
+      /usr/share/git/diff-highlight
+      $path
+    )
+  fi
+
 fi
 
 # Set the basic list for the path
