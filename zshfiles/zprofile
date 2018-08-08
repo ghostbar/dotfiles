@@ -87,6 +87,13 @@ if [[ -d $HOME/bin ]]; then
   );
 fi
 
+if [[ -d $HOME/.local/bin ]]; then
+  path=(
+    $HOME/.local/bin
+    $path
+  );
+fi
+
 # If there's the Heroku Toolbelt installed then load it to the path
 if [[ -d /usr/local/heroku/bin ]]; then
   path=(
